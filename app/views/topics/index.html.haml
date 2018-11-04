@@ -1,8 +1,4 @@
 !!!
-/[if IE 7 ] <html class="ie ie7 lte9 lte8 lte7" lang="en-US">
-/[if IE 8] <html class="ie ie8 lte9 lte8" lang="en-US">
-/[if IE 9] <html class="ie ie9 lte9" lang="en-US">
-/ [if (gt IE 9)|!(IE)]><!
 %html.noIE{:lang => "en-US"}
   / <![endif]
   %head
@@ -16,12 +12,7 @@
     %link{:href => "http://fonts.googleapis.com/css?family=PT+Sans", :rel => "stylesheet"}/
     %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans", :rel => "stylesheet", :type => "text/css"}/
     %link{:href => "http://fonts.googleapis.com/css?family=Droid+Serif:regular,bold", :rel => "stylesheet"}/
-    / HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
-    /[if lt IE 9]
-      <script src="assets/js/html5shiv.js"></script>
-      <script src="assets/js/respond.js"></script>
-    /[if IE 8]
-      <script src="assets/js/selectivizr.js"></script>
+   
   %body
     %header.top-header
       .container
@@ -308,14 +299,6 @@
               %a{:href => "http://www.themewagon.com/", :target => "_blink"} ThemeWagon
       / #footer
     / /#wrapper
-    /
-      <script src="assets/js/jquery-2.1.3.min.js"></script>
-      <script src="assets/js/bootstrap.js"></script>
-      <script src="assets/js/jquery.actual.min.js"></script>
-      <script src="assets/js/jquery.scrollTo.min.js"></script>
-      <script src="assets/js/contact.js"></script>
-      <script src="assets/js/script.js"></script>
-      <script src="assets/js/smoothscroll.js"></script>
     :javascript
       jQuery(document).ready(function($){
 
