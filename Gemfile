@@ -54,3 +54,14 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # honoka gem
 gem 'honoka-rails', '>= 3.3.6.3'
+
+#bootstrap scss
+gem 'bootstrap-sass'
+
+#font awesome
+gem 'font-awesome-rails'
+
+gem 'erb2haml'
+gem 'haml-rails'
+
+gem 'jquery-rails'
