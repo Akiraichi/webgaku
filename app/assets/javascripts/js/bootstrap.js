@@ -2099,7 +2099,7 @@ if (typeof jQuery === 'undefined') {
     $active.removeClass('in')
   }
 
-
+  
   // TAB PLUGIN DEFINITION
   // =====================
 

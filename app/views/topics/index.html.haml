@@ -24,7 +24,7 @@
                 Nevada
                 %span.logo-head Plus
           .col-md-8.col-md-offset-1.col-xs-7
-            %nav.navbar.navbar-default
+            %nav.navbar.navbar-default#back-no
               .container-fluid.nav-bar
                 / Brand and toggle get grouped for better mobile display
                 .navbar-header
@@ -75,7 +75,7 @@
           </section>
         %section.center
           .slogan
-            SLIM &amp; STYLISH
+            学生会
           .secondary-slogan
             The Nevada plus Theme By ThemeWagon.
       / header
@@ -85,58 +85,58 @@
           %header.block-heading.cleafix
             .title-page
               %p.main-header About us
-              %p.sub-header Make sure you know about us
+              %p.sub-header#font-size-16 本会は、学生の自治自律の精神に基づく自発的活動を通じて以下のことを目的とする
           .divide50
           .row
             .col-md-4.text-center
               .aboutus-item
                 %i.aboutus-icon.fa.fa-plane
                 %h4.aboutus-title Great Transport
-                %p.aboutus-desc Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni voluptatum et, alias vero, reprehenderit doloremque neque dignissimos voluptas.
+                %p.aboutus-desc 学生生活を楽しく、豊かに、節度あるものとし、良き校風と伝統を創りあげること。
             .col-md-4.text-center
               .aboutus-item
                 %i.aboutus-icon.fa.fa-usd
                 %h4.aboutus-title Not Expensive
-                %p.aboutus-desc Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni voluptatum et, alias vero, reprehenderit doloremque neque dignissimos voluptas.
+                %p.aboutus-desc 心身の健康を助長し健全な趣味、豊かな教養を身につけ、思索と実践力に富む格調高い人間を創りあげること。
             .col-md-4.text-center
               .aboutus-item
                 %i.aboutus-icon.fa.fa-cutlery
                 %h4.aboutus-title Delicious Food
-                %p.aboutus-desc Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni voluptatum et, alias vero, reprehenderit doloremque neque dignissimos voluptas.
+                %p.aboutus-desc 学校生活における集団活動に積極的に参加し、協同的、民主的行動の態度を身につけること。 
       / /About us
       #portfolio.content-block
         .container.portfolio-sec
           %header.block-heading.cleafix
             %a.btn.btn-o.btn-lg.pull-right{:href => "#"} View All
             .title-page
-              %p.main-header Our Latest Works
+              %p.main-header 最新の活動
               %p.sub-header Take a look at some of our recent products
           %section.block-body
             .row
               .col-sm-4
-                %a.recent-work{:href => "#", :style => "background-image:url(assets/images/rain_1-320x240.jpg)"}
+                %a.recent-work{:href => "#", :style => "background-image:url(/images/rikezyo.png)"}
                   %span.btn.btn-o-white Lorem Rocks
               .col-sm-4
-                %a.recent-work{:href => "#", :style => "background-image:url(assets/images/min_icons_thumb1-320x240.jpg)"}
+                %a.recent-work{:href => "#", :style => "background-image:url(/images/takkyu.jpg)"}
                   %span.btn.btn-o-white Lorem Rocks
               .col-sm-4
-                %a.recent-work{:href => "#", :style => "background-image:url(assets/images/flat_icons_thumb.jpg)"}
+                %a.recent-work{:href => "#", :style => "background-image:url(/images/tanka.jpg)"}
                   %span.btn.btn-o-white Lorem Rocks
             .row
               .col-sm-4
-                %a.recent-work{:href => "#", :style => "background-image:url(assets/images/wood-320x240.jpg)"}
+                %a.recent-work{:href => "#", :style => "background-image:url(/images/monodukuri.jpg)"}
                   %span.btn.btn-o-white Lorem Rocks
               .col-sm-4
-                %a.recent-work{:href => "#", :style => "background-image:url(assets/images/bike-320x240.jpg)"}
+                %a.recent-work{:href => "#", :style => "background-image:url(/images/miraito.jpg)"}
                   %span.btn.btn-o-white Lorem Rocks
               .col-sm-4
-                %a.recent-work{:href => "#", :style => "background-image:url(assets/images/six_1-320x240.jpg)"}
+                %a.recent-work{:href => "#", :style => "background-image:url(/images/six_1-320x240.jpg)"}
                   %span.btn.btn-o-white Lorem Rocks
       / #portfolio
       #services.content-block.parallax
         .container.services-sec
           .title-page
-            %p.main-header Our Services
+            %p.main-header 学生会のサービス
             %p.sub-header A little about what we do
           %section.block-body
             .row
@@ -144,19 +144,19 @@
                 .service
                   .bar
                     %i.fa.fa-send-o
-                  %h2.service-head Illustration
+                  %h2.service-head 予算のヒアリング
                   %p In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit in lorem.
               .col-md-4
                 .service
                   .bar
                     %i.fa.fa-heart-o
-                  %h2.service-head 3D Modeling
+                  %h2.service-head 学内トラブルの相談
                   %p In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit in lorem.
               .col-md-4
                 .service
                   .bar
                     %i.fa.fa-camera-retro
-                  %h2.service-head Photography
+                  %h2.service-head 各種イベントの実施
                   %p In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit in lorem.
       / #services
       #blog.content-block
@@ -164,28 +164,28 @@
           %header.block-heading.cleafix
             %a.btn.btn-o.btn-lg.pull-right{:href => "#"} View All
             .title-page
-              %p.main-header From the Blog
+              %p.main-header 役員ブログ
               %p.sub-header Keep up with the latest happenings.
           %section.block-body
             .row
               .col-sm-4.blog-post
-                %img{:src => "assets/images/bike_water1-1000x600.jpg"}/
+                %img{:src => "/images/bike_water1-1000x600.jpg"}/
                 %a{:href => "#"}
-                  %h2 Design Your Mind
+                  %h2 クラスマッチを終えて
                 .date 3 Nov, 2014
                 %p In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit in lorem.
                 %a{:href => ""} Read More
               .col-sm-4.blog-post
-                %img{:src => "assets/images/mac_glasses1-1000x600.jpg"}/
+                %img{:src => "/images/mac_glasses1-1000x600.jpg"}/
                 %a{:href => "#"}
-                  %h2 Winter Is Comming
+                  %h2 あの日が来る、星が瞬く日
                 .date 3 Nov, 2014
                 %p In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit in lorem.
                 %a{:href => ""} Read More
               .col-sm-4.blog-post
-                %img{:src => "assets/images/road-1000x600.jpg"}/
+                %img{:src => "/images/road-1000x600.jpg"}/
                 %a{:href => "#"}
-                  %h2 The Illustration
+                  %h2 体育祭を無くしてみた
                 .date 3 Nov, 2014
                 %p In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit in lorem.
                 %a{:href => ""} Read More
@@ -200,7 +200,7 @@
           %header.block-heading.cleafix
             .title-page.pull-left
               %p.main-header Testimonial
-              %p.sub-header What our client says
+              %p.sub-header 現役高専生の意見
           %section.block-body
             .row
               #carousel-example-generic.carousel.slide{"data-ride" => "carousel"}
@@ -214,21 +214,21 @@
                 .carousel-inner{:role => "listbox"}
                   .item.active
                     .img-center
-                      %img.img-circle.circular-img{:src => "assets/images/01_200x200.png"}/
+                      %img.img-circle.circular-img{:src => "/images/01_200x200.png"}/
                     %h3
-                      Create a website that you are gonna be proud of. Be it Business, Portfolio, Photography, eCommerce &amp; much more.
+                      体育祭が無くなってとても残念だ。来年はぜひ体育祭を再開してほしい
                   / /.item
                   .item
                     .img-center
-                      %img.img-circle.circular-img{:src => "assets/images/02_200x200.png"}/
+                      %img.img-circle.circular-img{:src => "/images/02_200x200.png"}/
                     %h3
-                      Create a website that you are gonna be proud of. Be it Business, Portfolio, Photography, eCommerce &amp; much more.
+                      高専のカリキュラムは崩壊気味だ。学生を無視した強引なカリキュラム変更を繰り返してもいい教育は生まれない
                   / /.item
                   .item
                     .img-center
-                      %img.img-circle.circular-img{:src => "assets/images/03_200x200.png"}/
+                      %img.img-circle.circular-img{:src => "/images/03_200x200.png"}/
                     %h3
-                      Create a website that you are gonna be proud of. Be it Business, Portfolio, Photography, eCommerce &amp; much more.
+                      今日は家に帰ってゲームしようと思うんだ。
                   / /.item
                 / /.carousel-inner
               / /.carousel slide
@@ -238,31 +238,34 @@
         .container
           .row
             .col-sm-4.blog-post
-              %h2.footer-block Have a question
+              %h2.footer-block 意見がありますか？
               %p Praesent lacinia dapibus, accumsan vesti bulum. Pellen tesque molestie mollis.
               %p
-                Mauris nec ligula dui, fermentum nisl ut magna dolor, rhoncus wisi. In lacus sagittis luctus, nisl eros, sit amet tempor et, accumsan eget, pede. Suspendisse est. Ut rhoncus eu, pede. Vestibulum ante ipsum dolor lorem, iaculis mi. Pellentesque eu urna eget dolor. Duis luctus a, dolor. Duis ac sapien.
+                共催・提携や取材のご依頼、ご質問等は下記のフォームよりお気軽にお問い合わせください。
+              %p お問い合わせ内容の確認後、担当者よりご連絡させて頂きます。
+              %p 採用についてのご連絡は、こちらからお願いします。
+
               %p Estibulum dapibus, maurimalesfames ac turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Aliquam erat ac ipsum. Integer aliquam purus ultricies gravida vitae...
             .col-sm-4.blog-post
-              %h2.footer-block Leave us a message
+              %h2.footer-block メッセージを送る
               %form#contactForm{:action => "contact-form.php", :method => "post", :name => "contactform", :role => "form"}
                 .form-group
-                  %input#name.form-control.form-control-white{:name => "name", :placeholder => "Your Name", :required => "", :type => "text"}/
+                  %input#name.form-control.form-control-white{:name => "name", :placeholder => "名前", :required => "", :type => "text"}/
                 .form-group
-                  %input#email.form-control.form-control-white{:name => "email", :placeholder => "Enter email", :required => "", :type => "email"}/
+                  %input#email.form-control.form-control-white{:name => "email", :placeholder => "メールアドレス", :required => "", :type => "email"}/
                 .form-group
-                  %textarea#message.form-control.form-control-white{:name => "massage", :placeholder => "Write Something", :required => ""}
+                  %textarea#message.form-control.form-control-white{:name => "massage", :placeholder => "メッセージ", :required => ""}
                 #contactFormResponse
                 .form-group
                   %input#cfsubmit.text-center.btn.btn-o-white{:type => "submit", :value => "Say Hello"}/
             .col-sm-4.blog-post
-              %h2.footer-block Contact Details
+              %h2.footer-block お問い合わせ先
               %ul
                 %li.address-sub
                   %i.fa.fa-map-marker>
                   Office Address
                 %p
-                  Blabla Parkway, P.o Box 353 Mountain View. United States of America.
+                  高知高専　学生食堂横
                 %li.address-sub
                   %i.fa.fa-phone>
                   Phone

@@ -1,7 +1,14 @@
+@import "font-awesome";
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "honoka";
-@import "./css/bootstrap.min";
-@import "./css/font-awesome.min";
-@import "./css/style";
-@import "font-awesome";
+@import "css/bootstrap.min";
+@import "css/font-awesome.min";
+@import "css/style";
+
+#back-no{
+  background: none;
+}
+#font-size-16{
+  font-size: 23px;
+}
