@@ -56,7 +56,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'honoka-rails', '>= 3.3.6.3'
 
 #bootstrap scss
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '~> 3.3.7'
 
 #font awesome
 gem 'font-awesome-rails'
