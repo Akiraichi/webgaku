@@ -1,0 +1,484 @@
+!!!
+%html.no-js{:lang => "en"}
+  / Begin Head
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    / Basic
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width, initial-scale=1, shrink-to-fit=no", :name => "viewport"}/
+    %meta{:content => "ie=edge", "http-equiv" => "x-ua-compatible"}/
+    %title Megakit - HTML5 Theme
+    %meta{:content => "HTML5 Theme", :name => "keywords"}/
+    %meta{:content => "Megakit - HTML5 Theme", :name => "description"}/
+    %meta{:content => "keenthemes.com", :name => "author"}/
+    / Web Fonts
+    %link{:href => "https://fonts.googleapis.com/css?family=Lato:300,400,400i|Montserrat:400,700", :rel => "stylesheet"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Playfair+Display:400,700", :rel => "stylesheet"}/
+    / Vendor Styles
+    %link{:href => "vendor/bootstrap/css/bootstrap.min.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "css/animate.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "vendor/themify/themify.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "vendor/scrollbar/scrollbar.min.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "vendor/swiper/swiper.min.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "vendor/cubeportfolio/css/cubeportfolio.min.css", :rel => "stylesheet", :type => "text/css"}/
+    / Theme Styles
+    %link{:href => "css/style.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "css/global/global.css", :rel => "stylesheet", :type => "text/css"}/
+    / Theme Skins
+    %link{:href => "css/theme/gold.css", :rel => "stylesheet", :type => "text/css"}/
+    / Favicon
+    %link{:href => "img/favicon.ico", :rel => "shortcut icon", :type => "image/x-icon"}/
+    %link{:href => "img/apple-touch-icon.png", :rel => "apple-touch-icon"}/
+  / End Head
+  / Body
+  %body
+    / ========== HEADER ==========
+    %header.navbar-fixed-top.s-header.js__header-sticky.js__header-overlay
+      / Navbar
+      .s-header__navbar
+        .s-header__container
+          .s-header__navbar-row
+            .s-header__navbar-row-col
+              / Logo
+              .s-header__logo
+                %a.s-header__logo-link{:href => "index.html"}
+                  %img.s-header__logo-img.s-header__logo-img-default{:alt => "Megakit Logo", :src => "img/logo-gold.png"}/
+                  %img.s-header__logo-img.s-header__logo-img-shrink{:alt => "Megakit Logo", :src => "img/logo-gold-dark.png"}/
+              / End Logo
+            .s-header__navbar-row-col
+              / Trigger
+              %a.s-header__trigger.js__trigger{:href => "javascript:void(0);"}
+                %span.s-header__trigger-icon
+                %svg{:height => "3.125rem", :viewbox => "0 0 54 54", :width => "3.125rem", :x => "0rem", :y => "0rem"}
+                  %circle{:cx => "27", :cy => "27", :fill => "transparent", :r => "25", :stroke => "#fff", "stroke-dasharray" => "157 157", "stroke-dashoffset" => "157", "stroke-width" => "1"}
+              / End Trigger
+      / End Navbar
+      / Overlay
+      .s-header-bg-overlay.js__bg-overlay
+        / Nav
+        %nav.s-header__nav.js__scrollbar
+          .container-fluid
+            / Menu List
+            %ul.list-unstyled.s-header__nav-menu
+              %li.s-header__nav-menu-item
+                %a.s-header__nav-menu-link.s-header__nav-menu-link-divider.g-font-family--playfair{:href => "index.html"} Corporate
+              %li.s-header__nav-menu-item
+                %a.s-header__nav-menu-link.s-header__nav-menu-link-divider.g-font-family--playfair{:href => "index_app_landing.html"} App Landing
+              %li.s-header__nav-menu-item
+                %a.s-header__nav-menu-link.s-header__nav-menu-link-divider.g-font-family--playfair{:href => "index_portfolio.html"} Portfolio
+              %li.s-header__nav-menu-item
+                %a.s-header__nav-menu-link.s-header__nav-menu-link-divider.g-font-family--playfair{:href => "index_events.html"} Events
+              %li.s-header__nav-menu-item
+                %a.s-header__nav-menu-link.s-header__nav-menu-link-divider.g-font-family--playfair.-is-active{:href => "index_lawyer.html"} Lawyer
+              %li.s-header__nav-menu-item
+                %a.s-header__nav-menu-link.s-header__nav-menu-link-divider.g-font-family--playfair{:href => "index_clinic.html"} Clinic
+              %li.s-header__nav-menu-item
+                %a.s-header__nav-menu-link.s-header__nav-menu-link-divider.g-font-family--playfair{:href => "index_coming_soon.html"} Coming Soon
+            / End Menu List
+            / Menu List
+            %ul.list-unstyled.s-header__nav-menu
+              %li.s-header__nav-menu-item
+                %a.s-header__nav-menu-link.s-header__nav-menu-link-divider.g-font-family--playfair{:href => "about.html"} About
+              %li.s-header__nav-menu-item
+                %a.s-header__nav-menu-link.s-header__nav-menu-link-divider.g-font-family--playfair{:href => "team.html"} Team
+              %li.s-header__nav-menu-item
+                %a.s-header__nav-menu-link.s-header__nav-menu-link-divider.g-font-family--playfair{:href => "services.html"} Services
+              %li.s-header__nav-menu-item
+                %a.s-header__nav-menu-link.s-header__nav-menu-link-divider.g-font-family--playfair{:href => "events.html"} Events
+              %li.s-header__nav-menu-item
+                %a.s-header__nav-menu-link.s-header__nav-menu-link-divider.g-font-family--playfair{:href => "faq.html"} FAQ
+              %li.s-header__nav-menu-item
+                %a.s-header__nav-menu-link.s-header__nav-menu-link-divider.g-font-family--playfair{:href => "contacts.html"} Contacts
+            / End Menu List
+        / End Nav
+        / Action
+        %ul.list-inline.s-header__action.s-header__action--lb
+          %li.s-header__action-item.g-font-family--playfair
+            %a.s-header__action-link.-is-active{:href => "#"} En
+          %li.s-header__action-item.g-font-family--playfair
+            %a.s-header__action-link{:href => "#"} Fr
+        / End Action
+        / Action
+        %ul.list-inline.s-header__action.s-header__action--rb
+          %li.s-header__action-item
+            %a.s-header__action-link.g-font-family--playfair{:href => "https://www.behance.net/keenthemes"}
+              %i.g-padding-r-5--xs.ti-facebook
+              %span.g-display-none--xs.g-display-inline-block--sm Facebook
+          %li.s-header__action-item
+            %a.s-header__action-link.g-font-family--playfair{:href => "https://twitter.com/keenthemes"}
+              %i.g-padding-r-5--xs.ti-twitter
+              %span.g-display-none--xs.g-display-inline-block--sm Twitter
+          %li.s-header__action-item
+            %a.s-header__action-link.g-font-family--playfair{:href => "https://dribbble.com/keenthemes"}
+              %i.g-padding-r-5--xs.ti-instagram
+              %span.g-display-none--xs.g-display-inline-block--sm Instagram
+        / End Action
+      / End Overlay
+    / ========== END HEADER ==========
+    / ========== PROMO BLOCK ==========
+    .g-fullheight--xs.js__parallax-window{:style => "background: url(img/1920x1080/11.jpg) 50% 0 no-repeat fixed; background-size: cover;"}
+      .g-container--md.g-ver-center--xs.g-text-center--xs
+        .g-margin-b-70--xs
+          %h1.g-font-size-55--sm.g-font-size-70--lg.g-font-family--playfair.g-color--primary.g-margin-b-20--xs.g-margin-b-40--sm High Quality Law
+          %p.g-font-size-18--xs.g-font-size-20--sm.g-font-size-24--lg.g-color--white.g-margin-b-0--xs Whether your case involves a complex divorce, child custody, domestic violence or DUI, we are dedicated to vigorously protecting your future.
+        %a.text-uppercase.s-btn.s-btn-icon--md.s-btn--primary-brd.g-radius--50.g-padding-x-60--xs{:href => "#js__scroll-to-section"} Hire Us
+      %a.s-scroll-to-section-v1--bc.g-margin-b-15--xs{:href => "http://keenthemes.com/"}
+        %span.g-font-size-18--xs.g-color--white.ti-angle-double-down
+        %p.text-uppercase.g-font-family--playfair.g-color--white.g-letter-spacing--3.g-margin-b-0--xs Learn More
+    / ========== END PROMO BLOCK ==========
+    / ========== PAGE CONTENT ==========
+    / About
+    #js__scroll-to-section.container.g-padding-y-80--xs.g-padding-y-125--sm.g-margin-b-25--xs
+      .row.g-hor-centered-row--md
+        .col-md-8.g-hor-centered-row__col.g-margin-b-60--xs.g-margin-b-0--md
+          .g-width-100-percent--xs.g-width-400--md.g-margin-b-40--xs
+            %h2.g-font-size-32--xs.g-font-size-36--md.g-font-family--playfair.g-margin-b-20--xs
+              We are
+              = succeed "Leaders" do
+                %br/
+            %p.g-font-size-16--sm Now that we've aligned the details, it's time to get things mapped out and organized. This part is really crucial in keeping the project in line to completion.
+            %p.g-font-size-16--sm The time has come to bring those ideas and plans to life. This is where we really begin to visualize your napkin sketches and make them into beautiful pixels.
+          .wow.fadeInUp{"data-wow-delay" => ".5s", "data-wow-duration" => ".3"}
+            .g-position--overlay.g-text-left--xs.g-text-right--md.g-margin-t-o-50--lg
+              %span.g-font-size-60--xs.g-font-size-80--sm.g-font-size-105--lg.g-font-family--playfair.g-color--primary.g-line-height--xs 15
+              %span.text-uppercase.g-display-block--xs.g-font-size-34--xs.g-font-size-40--sm.g-font-size-50--lg.g-font-weight--700.g-font-family--playfair.g-color--primary.g-line-height--xs Years
+              %p.g-font-size-18--xs.g-font-size-20--lg of Experience
+        .col-md-4.col-xs-6.col-xs-offset-3.g-full-width--xs.g-full-width-offset-0--xs.g-hor-centered-row__col
+          .wow.fadeInUp{"data-wow-delay" => ".1s", "data-wow-duration" => ".3"}
+            %img.img-responsive{:alt => "Image", :src => "img/450x700/01.jpg"}/
+    / End About
+    / Service
+    .clearfix
+      .g-container--sm.g-text-center--xs.g-margin-b-125--xs
+        %p.text-uppercase.g-font-size-14--xs.g-font-weight--700.g-color--primary.g-letter-spacing--2.g-margin-b-25--xs Multidisciplinary Approach
+        %p.g-font-size-20--xs High quality support and results for your legal issues. We take care of our clients. We are your lawyers.
+      .g-container--sm.center-block.g-margin-b-125--xs
+        .wow.fadeInUp{"data-wow-delay" => ".1s", "data-wow-duration" => ".3"}
+          %img.img-responsive{:alt => "Mockup Image", :src => "img/mockups/items-01.png"}/
+      .row.g-row-col--0
+        .col-sm-4
+          .g-text-center--xs.g-padding-x-30--xs.g-padding-x-50--lg.g-padding-y-70--xs
+            %i.g-display-block--xs.g-font-size-40--sm.g-color--primary.g-margin-b-30--xs.ti-heart-broken
+            %span.g-display-block--xs.g-font-size-13--sm.g-letter-spacing--3.g-margin-b-25--xs 01
+            %h2.g-font-size-26--xs.g-font-family--playfair Family Law
+            %ul.list-unstyled.g-ul-li-tb-3--xs
+              %li
+                %a{:href => "http://keenthemes.com/"} Divorce
+              %li
+                %a{:href => "http://keenthemes.com/"} Asse Distribution
+              %li
+                %a{:href => "http://keenthemes.com/"} Alimony &amp; Child Support
+              %li
+                %a{:href => "http://keenthemes.com/"} Grandparent &amp; Relative Custody
+              %li
+                %a{:href => "http://keenthemes.com/"} Custody &amp; Timesharing
+        .col-sm-4
+          .g-bg-color--sky-light.g-text-center--xs.g-padding-x-30--xs.g-padding-x-50--lg.g-padding-y-70--xs
+            %i.g-display-block--xs.g-font-size-40--sm.g-color--primary.g-margin-b-30--xs.ti-package
+            %span.g-display-block--xs.g-font-size-13--sm.g-letter-spacing--3.g-margin-b-25--xs 02
+            %h2.g-font-size-26--xs.g-font-family--playfair Criminal Law
+            %ul.list-unstyled.g-ul-li-tb-3--xs
+              %li
+                %a{:href => "http://keenthemes.com/"} Drug Offenses
+              %li
+                %a{:href => "http://keenthemes.com/"} Weapons Offense
+              %li
+                %a{:href => "http://keenthemes.com/"} Criminal Domestic Violence
+              %li
+                %a{:href => "http://keenthemes.com/"} Sexual Offenses
+              %li
+                %a{:href => "http://keenthemes.com/"} Misdemeanors
+        .col-sm-4
+          .g-text-center--xs.g-padding-x-30--xs.g-padding-x-50--lg.g-padding-y-70--xs
+            %i.g-display-block--xs.g-font-size-40--sm.g-color--primary.g-margin-b-30--xs.ti-blackboard
+            %span.g-display-block--xs.g-font-size-13--sm.g-letter-spacing--3.g-margin-b-25--xs 03
+            %h2.g-font-size-26--xs.g-font-family--playfair Corporate Law
+            %ul.list-unstyled.g-ul-li-tb-3--xs
+              %li
+                %a{:href => "http://keenthemes.com/"} Articles of association
+              %li
+                %a{:href => "http://keenthemes.com/"} Financial assistance
+              %li
+                %a{:href => "http://keenthemes.com/"} Reconstruction (law)
+              %li
+                %a{:href => "http://keenthemes.com/"} Say on pay
+              %li
+                %a{:href => "http://keenthemes.com/"} Industrial democracy
+    / End Service
+    / Parallax
+    .js__parallax-window{:style => "background: url(img/1920x1080/12.jpg) 50% 0 no-repeat fixed;"}
+      .container.g-text-center--xs.g-padding-y-80--xs.g-padding-y-125--sm
+        .g-margin-b-100--xs
+          .g-text-center--xs.g-margin-b-50--xs
+            %p.text-uppercase.g-font-size-14--xs.g-font-weight--700.g-color--white-opacity.g-letter-spacing--2.g-margin-b-25--xs Identity &amp; Categories
+            %h2.g-font-size-40--xs.g-font-size-50--sm.g-font-size-60--md.g-font-family--playfair.g-color--white You are in Good Hands
+          %a.text-uppercase.s-btn.s-btn-icon--md.s-btn--primary-brd.g-radius--50.g-padding-x-60--xs{:href => "http://keenthemes.com/"} Hire Us
+    / End Parallax
+    / Tab
+    .container.g-margin-t-o-100--xs.g-margin-b-125--xs
+      .row.g-row-col--0
+        .col-sm-6
+          / Filter
+          .g-bg-position--center.g-padding-x-30--xs.g-padding-x-40--sm.g-padding-y-30--xs.g-padding-y-40--sm.js__tab-eqaul-height-v1{:style => "background: url('img/970x970/04.jpg') no-repeat;"}
+            .g-hor-border-1__solid--primary.g-padding-x-40--xs.g-padding-x-50--sm.g-padding-y-100--xs.g-padding-y-120--sm.js__filters-tabs
+              .s-tab__filter-v1.g-font-family--playfair.cbp-filter-item-active.cbp-filter-item{"data-filter" => ".-is-active"}
+                %span.text-uppercase.g-display-block--xs.g-font-size-24--xs.g-color--primary 01
+                Family Law
+              .s-tab__filter-v1.g-font-family--playfair.cbp-filter-item{"data-filter" => ".service"}
+                %span.text-uppercase.g-display-block--xs.g-font-size-24--xs.g-color--primary 02
+                Criminal Law
+              .s-tab__filter-v1.g-font-family--playfair.cbp-filter-item{"data-filter" => ".pages"}
+                %span.text-uppercase.g-display-block--xs.g-font-size-24--xs.g-color--primary 03
+                Corporate Law
+        / End Filter
+        / Grid
+        .col-sm-6
+          .g-bg-color--white.g-box-shadow__dark-lightest-v2.g-padding-x-30--xs.g-padding-x-60--sm.g-padding-y-60--xs.g-padding-y-80--sm.js__tab-eqaul-height-v1
+            .cbp.js__grid-tabs
+              .s-tab__grid-v1-item.cbp-item.-is-active
+                .g-margin-b-20--xs
+                  %p.text-uppercase.g-font-size-14--xs.g-font-weight--700.g-color--primary.g-letter-spacing--2.g-margin-b-25--xs Family Law
+                  %h2.g-font-size-32--xs.g-font-family--playfair How Family Law Attorneys Tend to Think, Final Part
+                %p The only answer that I have found is to get the case BEFORE any of these attorneys gets involved and do everything possible to make sure that neither party brings them on-board. This is VERY difficult and requires reaching the couple BEFORE either of them has retained counsel.”
+                %p As luck would have it, this same attorney attended a program I gave on June 23, 2015 on “How to Resolve Conflict.” During the Question and Answer portion of the program, he asked me that same question.
+              .s-tab__grid-v1-item.cbp-item.service
+                .g-margin-b-20--xs
+                  %p.text-uppercase.g-font-size-14--xs.g-font-weight--700.g-color--primary.g-letter-spacing--2.g-margin-b-25--xs Criminal Law
+                  %h2.g-font-size-32--xs.g-font-family--playfair A Criminal Defense Attorney is Any Good
+                %p As luck would have it, this same attorney attended a program I gave on June 23, 2015 on “How to Resolve Conflict.” During the Question and Answer portion of the program, he asked me that same question.
+                %p I responded by telling him that I currently address the issue by attempting to have a joint consultation with both parties, wherein we only discuss the various processes available for handling family law matters in California and the strengths and weaknesses of each.
+              .s-tab__grid-v1-item.cbp-item.pages
+                .g-margin-b-20--xs
+                  %p.text-uppercase.g-font-size-14--xs.g-font-weight--700.g-color--primary.g-letter-spacing--2.g-margin-b-25--xs Corporate Law
+                  %h2.g-font-size-32--xs.g-font-family--playfair InterLaw Diversity Forum launches BAME &amp; Allies Network
+                %p I responded by telling him that I currently address the issue by attempting to have a joint consultation with both parties, wherein we only discuss the various processes available for handling family law matters in California and the strengths and weaknesses of each.
+                %p The only answer that I have found is to get the case BEFORE any of these attorneys gets involved and do everything possible to make sure that neither party brings them on-board. This is VERY difficult and requires reaching the couple BEFORE either of them has retained counsel.”
+          / End Grid
+    / End Tab
+    / Counter
+    .js__parallax-window{:style => "background: url(img/1920x1080/12.jpg) 50% 0 no-repeat fixed;"}
+      .container.g-padding-y-80--xs.g-padding-y-125--sm
+        .g-text-center--xs.g-margin-b-80--xs
+          %p.text-uppercase.g-font-size-14--xs.g-font-weight--700.g-color--primary.g-letter-spacing--2.g-margin-b-25--xs.g-color--white-opacity Facts in Numbers
+          %h2.g-font-size-32--xs.g-font-size-36--md.g-font-family--playfair.g-letter-spacing--1.g-color--white You Can Make Us Better
+        .row
+          .col-md-3.col-xs-6.g-full-width--xs.g-margin-b-70--xs.g-margin-b-0--lg
+            .g-text-center--xs
+              .g-margin-b-10--xs
+                %span.g-font-size-40--xs.g-font-family--playfair.g-color--primary $
+                %figure.g-display-inline-block--xs.g-font-size-70--xs.g-font-family--playfair.g-color--primary.js__counter 500
+              .center-block.g-hor-divider__solid--white.g-width-40--xs.g-margin-b-25--xs
+              %h4.g-font-size-18--xs.g-color--white Millions Claimed
+          .col-md-3.col-xs-6.g-full-width--xs.g-margin-b-70--xs.g-margin-b-0--lg
+            .g-text-center--xs
+              %figure.g-display-block--xs.g-font-size-70--xs.g-font-family--playfair.g-color--primary.g-margin-b-10--xs.js__counter 25
+              .center-block.g-hor-divider__solid--white.g-width-40--xs.g-margin-b-25--xs
+              %h4.g-font-size-18--xs.g-color--white Award Winners
+          .col-md-3.col-xs-6.g-full-width--xs.g-margin-b-70--xs.g-margin-b-0--sm
+            .g-text-center--xs
+              %figure.g-display-block--xs.g-font-size-70--xs.g-font-family--playfair.g-color--primary.g-margin-b-10--xs.js__counter 205
+              .center-block.g-hor-divider__solid--white.g-width-40--xs.g-margin-b-25--xs
+              %h4.g-font-size-18--xs.g-color--white Cases Settled
+          .col-md-3.col-xs-6.g-full-width--xs
+            .g-text-center--xs
+              .g-margin-b-10--xs
+                %figure.g-display-inline-block--xs.g-font-size-70--xs.g-font-family--playfair.g-color--primary.js__counter 92
+                %span.g-font-size-40--xs.g-font-family--playfair.g-color--primary %
+              .center-block.g-hor-divider__solid--white.g-width-40--xs.g-margin-b-25--xs
+              %h4.g-font-size-18--xs.g-color--white Success Rate
+    / End Counter
+    / Testimonials
+    .g-padding-y-80--xs.g-padding-y-125--sm
+      .container.g-text-center--xs
+        %p.text-uppercase.g-font-size-14--xs.g-font-weight--700.g-color--primary.g-letter-spacing--2.g-margin-b-50--xs Testimonials
+        .s-swiper.js__swiper-testimonials
+          / Swiper Wrapper
+          .swiper-wrapper.g-margin-b-50--xs
+            .swiper-slide.g-padding-x-130--sm.g-padding-x-150--lg
+              .g-padding-x-20--xs.g-padding-x-50--lg
+                %img.g-width-70--xs.g-height-70--xs.g-hor-border-4__solid--white.g-box-shadow__primary-v1.g-radius--circle.g-margin-b-30--xs{:alt => "Image", :src => "img/400x400/04.jpg"}/
+                .g-margin-b-40--xs
+                  %p.g-font-size-22--xs.g-font-size-28--sm.g-font-family--playfair.g-color--heading
+                    %i " I have purchased many great templates over the years but this product and this company have taken it to the next level. Exceptional customizability. "
+                .center-block.g-hor-divider__solid--heading-light.g-width-100--xs.g-margin-b-30--xs
+                %h4.g-font-size-15--xs.g-font-size-18--sm.g-font-weight--400.g-font-family--primary.g-color--primary.g-margin-b-5--xs Jake Richardson / Google
+            .swiper-slide.g-padding-x-130--sm.g-padding-x-150--lg
+              .g-padding-x-20--xs.g-padding-x-50--lg
+                %img.g-width-70--xs.g-height-70--xs.g-hor-border-4__solid--white.g-box-shadow__primary-v1.g-radius--circle.g-margin-b-30--xs{:alt => "Image", :src => "img/400x400/05.jpg"}/
+                .g-margin-b-40--xs
+                  %p.g-font-size-22--xs.g-font-size-28--sm.g-font-family--playfair.g-color--heading
+                    %i " I have purchased many great templates over the years but this product and this company have taken it to the next level. Exceptional customizability. "
+                .center-block.g-hor-divider__solid--heading-light.g-width-100--xs.g-margin-b-30--xs
+                %h4.g-font-size-15--xs.g-font-size-18--sm.g-font-weight--400.g-font-family--primary.g-color--primary.g-margin-b-5--xs Jake Richardson / Google
+            .swiper-slide.g-padding-x-130--sm.g-padding-x-150--lg
+              .g-padding-x-20--xs.g-padding-x-50--lg
+                %img.g-width-70--xs.g-height-70--xs.g-hor-border-4__solid--white.g-box-shadow__primary-v1.g-radius--circle.g-margin-b-30--xs{:alt => "Image", :src => "img/400x400/06.jpg"}/
+                .g-margin-b-40--xs
+                  %p.g-font-size-22--xs.g-font-size-28--sm.g-font-family--playfair.g-color--heading
+                    %i " I have purchased many great templates over the years but this product and this company have taken it to the next level. Exceptional customizability. "
+                .center-block.g-hor-divider__solid--heading-light.g-width-100--xs.g-margin-b-30--xs
+                %h4.g-font-size-15--xs.g-font-size-18--sm.g-font-weight--400.g-font-family--primary.g-color--primary.g-margin-b-5--xs Jake Richardson / Google
+          / End Swipper Wrapper
+          / Arrows
+          .g-font-size-22--xs.g-color--heading.js__swiper-fraction
+          %a.g-display-none--xs.g-display-inline-block--sm.s-swiper__arrow-v1--right.s-icon.s-icon--md.s-icon--primary-brd.g-radius--circle.ti-angle-right.js__swiper-btn--next{:href => "javascript:void(0);"}
+          %a.g-display-none--xs.g-display-inline-block--sm.s-swiper__arrow-v1--left.s-icon.s-icon--md.s-icon--primary-brd.g-radius--circle.ti-angle-left.js__swiper-btn--prev{:href => "javascript:void(0);"}
+          / End Arrows
+    / End Testimonials
+    / News
+    .g-bg-color--sky-light
+      .container.g-padding-y-80--xs.g-padding-y-125--sm
+        .g-text-center--xs.g-margin-b-60--xs
+          %p.text-uppercase.g-font-size-14--xs.g-font-weight--700.g-color--primary.g-letter-spacing--2 Active News
+        .row
+          .col-sm-4.g-margin-b-30--xs.g-margin-b-0--md
+            / News
+            %article
+              %img.img-responsive{:alt => "Image", :src => "img/970x970/01.jpg"}/
+              .g-bg-color--white.g-box-shadow__dark-lightest-v2.g-text-center--xs.g-padding-x-40--xs.g-padding-y-40--xs
+                %p.text-uppercase.g-font-size-14--xs.g-font-weight--700.g-color--primary.g-letter-spacing--2 Family Law
+                %h2.g-font-size-26--xs.g-font-family--playfair.g-letter-spacing--1
+                  %a{:href => "https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes"} Asset Distribution
+                %p The time has come to bring those ideas and plans to life.
+            / End News
+          .col-sm-4.g-margin-b-30--xs.g-margin-b-0--md
+            / News
+            %article
+              %img.img-responsive{:alt => "Image", :src => "img/970x970/02.jpg"}/
+              .g-bg-color--white.g-box-shadow__dark-lightest-v2.g-text-center--xs.g-padding-x-40--xs.g-padding-y-40--xs
+                %p.text-uppercase.g-font-size-14--xs.g-font-weight--700.g-color--primary.g-letter-spacing--2 Criminal Law
+                %h2.g-font-size-26--xs.g-font-family--playfair.g-letter-spacing--1
+                  %a{:href => "https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes"} Juvenile Cases
+                %p The time has come to bring those ideas and plans to life.
+            / End News
+          .col-sm-4
+            / News
+            %article
+              %img.img-responsive{:alt => "Image", :src => "img/970x970/03.jpg"}/
+              .g-bg-color--white.g-box-shadow__dark-lightest-v2.g-text-center--xs.g-padding-x-40--xs.g-padding-y-40--xs
+                %p.text-uppercase.g-font-size-14--xs.g-font-weight--700.g-color--primary.g-letter-spacing--2 Criminal Law
+                %h2.g-font-size-26--xs.g-font-family--playfair.g-letter-spacing--1
+                  %a{:href => "https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes"} Appellate Law
+                %p The time has come to bring those ideas and plans to life.
+            / End News
+    / End News
+    / Feedback Form
+    .g-position--relative.g-bg-color--primary
+      .g-container--md.g-padding-y-80--xs.g-padding-y-125--sm
+        .g-text-center--xs.g-margin-b-80--xs
+          %p.text-uppercase.g-font-size-14--xs.g-font-weight--700.g-color--white-opacity.g-letter-spacing--2.g-margin-b-25--xs Contact Us
+          %h2.g-font-size-32--xs.g-font-size-36--md.g-font-family--playfair.g-color--white Get in Touch
+        .row.g-row-col--5.g-margin-b-80--xs
+          .col-xs-4.g-full-width--xs.g-margin-b-30--xs.g-margin-b-0--sm
+            .wow.fadeInUp{"data-wow-delay" => ".3s", "data-wow-duration" => ".3"}
+              .g-text-center--xs
+                %i.g-display-block--xs.g-font-size-40--xs.g-color--white-opacity.g-margin-b-30--xs.ti-email
+                %h4.g-font-size-18--xs.g-font-family--playfair.g-color--white.g-margin-b-5--xs Email
+                %p.g-color--white-opacity support@keenthemes.com
+          .col-xs-4.g-full-width--xs.g-margin-b-30--xs.g-margin-b-0--sm
+            .wow.fadeInUp{"data-wow-delay" => ".1s", "data-wow-duration" => ".3"}
+              .g-text-center--xs
+                %i.g-display-block--xs.g-font-size-40--xs.g-color--white-opacity.g-margin-b-30--xs.ti-map-alt
+                %h4.g-font-size-18--xs.g-font-family--playfair.g-color--white.g-margin-b-5--xs Address
+                %p.g-color--white-opacity 277 Bedford Avenue, Brooklyn
+          .col-xs-4.g-full-width--xs
+            .wow.fadeInUp{"data-wow-delay" => ".3s", "data-wow-duration" => ".3"}
+              .g-text-center--xs
+                %i.g-display-block--xs.g-font-size-40--xs.g-color--white-opacity.g-margin-b-30--xs.ti-headphone-alt
+                %h4.g-font-size-18--xs.g-font-family--playfair.g-color--white.g-margin-b-5--xs Call at
+                %p.g-color--white-opacity + (1) 001 389 3720
+        %form.center-block.g-width-500--sm.g-width-550--md
+          .g-margin-b-30--xs
+            %input.form-control.s-form-v3__input{:placeholder => "* Name", :type => "text"}/
+          .row.g-row-col-5.g-margin-b-50--xs
+            .col-sm-6.g-margin-b-30--xs.g-margin-b-0--md
+              %input.form-control.s-form-v3__input{:placeholder => "* Email", :type => "email"}/
+            .col-sm-6
+              %input.form-control.s-form-v3__input{:placeholder => "* Phone", :type => "text"}/
+          .g-margin-b-80--xs
+            %textarea.form-control.s-form-v3__input{:placeholder => "* Your message", :rows => "5"}
+          .g-text-center--xs
+            %button.text-uppercase.s-btn.s-btn--md.s-btn--white-bg.g-radius--50.g-padding-x-70--xs.g-margin-b-20--xs{:type => "submit"} Submit
+      %img.s-mockup-v2{:alt => "Mockup Image", :src => "img/mockups/pencil-01.png"}/
+    / End Feedback Form
+    / ========== END PAGE CONTENT ==========
+    / ========== FOOTER ==========
+    %footer.g-bg-color--dark
+      / Links
+      .g-hor-divider__dashed--white-opacity-lightest
+        .container.g-padding-y-80--xs
+          .row
+            .col-sm-2.g-margin-b-20--xs.g-margin-b-0--md
+              %ul.list-unstyled.g-ul-li-tb-5--xs.g-margin-b-0--xs
+                %li
+                  %a.g-font-size-15--xs.g-color--white-opacity{:href => "http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes"} Home
+                %li
+                  %a.g-font-size-15--xs.g-color--white-opacity{:href => "http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes"} About
+                %li
+                  %a.g-font-size-15--xs.g-color--white-opacity{:href => "http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes"} Work
+                %li
+                  %a.g-font-size-15--xs.g-color--white-opacity{:href => "http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes"} Contact
+            .col-sm-2.g-margin-b-20--xs.g-margin-b-0--md
+              %ul.list-unstyled.g-ul-li-tb-5--xs.g-margin-b-0--xs
+                %li
+                  %a.g-font-size-15--xs.g-color--white-opacity{:href => "http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes"} Twitter
+                %li
+                  %a.g-font-size-15--xs.g-color--white-opacity{:href => "http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes"} Facebook
+                %li
+                  %a.g-font-size-15--xs.g-color--white-opacity{:href => "http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes"} Instagram
+                %li
+                  %a.g-font-size-15--xs.g-color--white-opacity{:href => "http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes"} YouTube
+            .col-sm-2.g-margin-b-40--xs.g-margin-b-0--md
+              %ul.list-unstyled.g-ul-li-tb-5--xs.g-margin-b-0--xs
+                %li
+                  %a.g-font-size-15--xs.g-color--white-opacity{:href => "http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes"} Subscribe to Our Newsletter
+                %li
+                  %a.g-font-size-15--xs.g-color--white-opacity{:href => "http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes"} Privacy Policy
+                %li
+                  %a.g-font-size-15--xs.g-color--white-opacity{:href => "http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes"} Terms &amp; Conditions
+            .col-md-4.col-md-offset-2.col-sm-5.col-sm-offset-1.s-footer__logo.g-padding-y-50--xs.g-padding-y-0--md
+              %h3.g-font-size-18--xs.g-color--white Megakit
+              %p.g-color--white-opacity We are a creative studio focusing on culture, luxury, editorial &amp; art. Somewhere between sophistication and simplicity.
+      / End Links
+      / Copyright
+      .container.g-padding-y-50--xs
+        .row
+          .col-xs-6
+            %a{:href => "index.html"}
+              %img.g-width-100--xs.g-height-auto--xs{:alt => "Megakit Logo", :src => "img/logo.png"}/
+          .col-xs-6.g-text-right--xs
+            %p.g-font-size-14--xs.g-margin-b-0--xs.g-color--white-opacity-light
+              %a{:href => "http://keenthemes.com/preview/Megakit/"} Megakit
+              Theme Powered by:
+              %a{:href => "http://www.keenthemes.com/"} KeenThemes.com
+      / End Copyright
+    / ========== END FOOTER ==========
+    / Back To Top
+    %a.s-back-to-top.js__back-to-top{:href => "javascript:void(0);"}
+    / ========== JAVASCRIPTS (Load javascripts at bottom, this will reduce page load time) ==========
+    / Vendor
+    %script{:src => "vendor/jquery.min.js", :type => "text/javascript"}
+    %script{:src => "vendor/jquery.migrate.min.js", :type => "text/javascript"}
+    %script{:src => "vendor/bootstrap/js/bootstrap.min.js", :type => "text/javascript"}
+    %script{:src => "vendor/jquery.smooth-scroll.min.js", :type => "text/javascript"}
+    %script{:src => "vendor/jquery.back-to-top.min.js", :type => "text/javascript"}
+    %script{:src => "vendor/scrollbar/jquery.scrollbar.min.js", :type => "text/javascript"}
+    %script{:src => "vendor/swiper/swiper.jquery.min.js", :type => "text/javascript"}
+    %script{:src => "vendor/waypoint.min.js", :type => "text/javascript"}
+    %script{:src => "vendor/counterup.min.js", :type => "text/javascript"}
+    %script{:src => "vendor/cubeportfolio/js/jquery.cubeportfolio.min.js", :type => "text/javascript"}
+    %script{:src => "vendor/jquery.parallax.min.js", :type => "text/javascript"}
+    %script{:src => "vendor/jquery.equal-height.min.js", :type => "text/javascript"}
+    %script{:src => "vendor/jquery.wow.min.js", :type => "text/javascript"}
+    / General Components and Settings
+    %script{:src => "js/global.min.js", :type => "text/javascript"}
+    %script{:src => "js/components/header-sticky.min.js", :type => "text/javascript"}
+    %script{:src => "js/components/scrollbar.min.js", :type => "text/javascript"}
+    %script{:src => "js/components/swiper.min.js", :type => "text/javascript"}
+    %script{:src => "js/components/counter.min.js", :type => "text/javascript"}
+    %script{:src => "js/components/parallax.min.js", :type => "text/javascript"}
+    %script{:src => "js/components/tab.min.js", :type => "text/javascript"}
+    %script{:src => "js/components/equal-height.min.js", :type => "text/javascript"}
+    %script{:src => "js/components/wow.min.js", :type => "text/javascript"}
+    / ========== END JAVASCRIPTS ==========
+  / End Body

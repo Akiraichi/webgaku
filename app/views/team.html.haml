@@ -1,0 +1,293 @@
+!!!
+%html.no-js{:lang => "en"}
+  / Begin Head
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    / Basic
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width, initial-scale=1, shrink-to-fit=no", :name => "viewport"}/
+    %meta{:content => "ie=edge", "http-equiv" => "x-ua-compatible"}/
+    %title Megakit - HTML5 Theme
+    %meta{:content => "HTML5 Theme", :name => "keywords"}/
+    %meta{:content => "Megakit - HTML5 Theme", :name => "description"}/
+    %meta{:content => "keenthemes.com", :name => "author"}/
+    / Web Fonts
+    %link{:href => "https://fonts.googleapis.com/css?family=Lato:300,400,400i|Montserrat:400,700", :rel => "stylesheet"}/
+    / Vendor Styles
+    %link{:href => "vendor/bootstrap/css/bootstrap.min.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "css/animate.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "vendor/themify/themify.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "vendor/scrollbar/scrollbar.min.css", :rel => "stylesheet", :type => "text/css"}/
+    / Theme Styles
+    %link{:href => "css/style.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "css/global/global.css", :rel => "stylesheet", :type => "text/css"}/
+    / Favicon
+    %link{:href => "img/favicon.ico", :rel => "shortcut icon", :type => "image/x-icon"}/
+    %link{:href => "img/apple-touch-icon.png", :rel => "apple-touch-icon"}/
+  / End Head
+  / Body
+  %body
+    / ========== HEADER ==========
+    %header.navbar-fixed-top.s-header.js__header-sticky.js__header-overlay
+      / Navbar
+      .s-header__navbar
+        .s-header__container
+          .s-header__navbar-row
+            .s-header__navbar-row-col
+              / Logo
+              .s-header__logo
+                %a.s-header__logo-link{:href => "index.html"}
+                  %img.s-header__logo-img.s-header__logo-img-default{:alt => "Megakit Logo", :src => "img/logo.png"}/
+                  %img.s-header__logo-img.s-header__logo-img-shrink{:alt => "Megakit Logo", :src => "img/logo-dark.png"}/
+              / End Logo
+            .s-header__navbar-row-col
+              / Trigger
+              %a.s-header__trigger.js__trigger{:href => "javascript:void(0);"}
+                %span.s-header__trigger-icon
+                %svg{:height => "3.125rem", :viewbox => "0 0 54 54", :width => "3.125rem", :x => "0rem", :y => "0rem"}
+                  %circle{:cx => "27", :cy => "27", :fill => "transparent", :r => "25", :stroke => "#fff", "stroke-dasharray" => "157 157", "stroke-dashoffset" => "157", "stroke-width" => "1"}
+              / End Trigger
+      / End Navbar
+      / Overlay
+      .s-header-bg-overlay.js__bg-overlay
+        / Nav
+        %nav.s-header__nav.js__scrollbar
+          .container-fluid
+            / Menu List
+            %ul.list-unstyled.s-header__nav-menu
+              %li.s-header__nav-menu-item
+                %a.s-header__nav-menu-link.s-header__nav-menu-link-divider{:href => "index.html"} Corporate
+              %li.s-header__nav-menu-item
+                %a.s-header__nav-menu-link.s-header__nav-menu-link-divider{:href => "index_app_landing.html"} App Landing
+              %li.s-header__nav-menu-item
+                %a.s-header__nav-menu-link.s-header__nav-menu-link-divider{:href => "index_portfolio.html"} Portfolio
+              %li.s-header__nav-menu-item
+                %a.s-header__nav-menu-link.s-header__nav-menu-link-divider{:href => "index_events.html"} Events
+              %li.s-header__nav-menu-item
+                %a.s-header__nav-menu-link.s-header__nav-menu-link-divider{:href => "index_lawyer.html"} Lawyer
+              %li.s-header__nav-menu-item
+                %a.s-header__nav-menu-link.s-header__nav-menu-link-divider{:href => "index_clinic.html"} Clinic
+              %li.s-header__nav-menu-item
+                %a.s-header__nav-menu-link.s-header__nav-menu-link-divider{:href => "index_coming_soon.html"} Coming Soon
+            / End Menu List
+            / Menu List
+            %ul.list-unstyled.s-header__nav-menu
+              %li.s-header__nav-menu-item
+                %a.s-header__nav-menu-link.s-header__nav-menu-link-divider{:href => "about.html"} About
+              %li.s-header__nav-menu-item
+                %a.s-header__nav-menu-link.s-header__nav-menu-link-divider.-is-active{:href => "team.html"} Team
+              %li.s-header__nav-menu-item
+                %a.s-header__nav-menu-link.s-header__nav-menu-link-divider{:href => "services.html"} Services
+              %li.s-header__nav-menu-item
+                %a.s-header__nav-menu-link.s-header__nav-menu-link-divider{:href => "events.html"} Events
+              %li.s-header__nav-menu-item
+                %a.s-header__nav-menu-link.s-header__nav-menu-link-divider{:href => "faq.html"} FAQ
+              %li.s-header__nav-menu-item
+                %a.s-header__nav-menu-link.s-header__nav-menu-link-divider{:href => "contacts.html"} Contacts
+            / End Menu List
+        / End Nav
+        / Action
+        %ul.list-inline.s-header__action.s-header__action--lb
+          %li.s-header__action-item
+            %a.s-header__action-link.-is-active{:href => "#"} En
+          %li.s-header__action-item
+            %a.s-header__action-link{:href => "#"} Fr
+        / End Action
+        / Action
+        %ul.list-inline.s-header__action.s-header__action--rb
+          %li.s-header__action-item
+            %a.s-header__action-link{:href => "https://www.behance.net/keenthemes"}
+              %i.g-padding-r-5--xs.ti-facebook
+              %span.g-display-none--xs.g-display-inline-block--sm Facebook
+          %li.s-header__action-item
+            %a.s-header__action-link{:href => "https://twitter.com/keenthemes"}
+              %i.g-padding-r-5--xs.ti-twitter
+              %span.g-display-none--xs.g-display-inline-block--sm Twitter
+          %li.s-header__action-item
+            %a.s-header__action-link{:href => "https://dribbble.com/keenthemes"}
+              %i.g-padding-r-5--xs.ti-dribbble
+              %span.g-display-none--xs.g-display-inline-block--sm Dribbble
+        / End Action
+      / End Overlay
+    / ========== END HEADER ==========
+    / ========== PROMO BLOCK ==========
+    .g-bg-position--center.js__parallax-window{:style => "background: url(img/1920x1080/09.jpg) 50% 0 no-repeat fixed;"}
+      .g-container--md.g-text-center--xs.g-padding-y-150--xs
+        %p.text-uppercase.g-font-size-14--xs.g-font-weight--700.g-color--white-opacity.g-letter-spacing--2.g-margin-b-25--xs 30 years experience
+        %h1.g-font-size-40--xs.g-font-size-50--sm.g-font-size-60--md.g-color--white.g-letter-spacing--1 Creative Team
+    / ========== END PROMO BLOCK ==========
+    / ========== PAGE CONTENT ==========
+    / Speakers
+    .container.g-padding-y-80--xs.g-padding-y-125--sm
+      .row.g-overflow--hidden
+        .col-xs-6.g-full-width--xs.g-margin-b-30--xs.g-margin-b-0--lg
+          / Speaker
+          .center-block.g-box-shadow__dark-lightest-v1.g-width-100-percent--xs.g-width-400--lg
+            %img.img-responsive.g-width-100-percent--xs{:alt => "Image", :src => "img/400x400/02.jpg"}/
+            .g-position--overlay.g-padding-x-30--xs.g-padding-y-30--xs.g-margin-t-o-60--xs
+              .g-bg-color--primary.g-padding-x-15--xs.g-padding-y-10--xs.g-margin-b-20--xs
+                %h4.g-font-size-22--xs.g-font-size-26--sm.g-color--white.g-margin-b-0--xs Anna Kusaikina
+              %p.g-font-weight--700 Founder
+              %p Now that we've aligned the details, it's time to get things mapped out and organized. This part is really crucial in keeping the project in line to completion.
+          / End Speaker
+        .col-xs-6.g-full-width--xs
+          / Speaker
+          .center-block.g-box-shadow__dark-lightest-v1.g-width-100-percent--xs.g-width-400--lg
+            %img.img-responsive.g-width-100-percent--xs{:alt => "Image", :src => "img/400x400/01.jpg"}/
+            .g-position--overlay.g-padding-x-30--xs.g-padding-y-30--xs.g-margin-t-o-60--xs
+              .g-bg-color--primary.g-padding-x-15--xs.g-padding-y-10--xs.g-margin-b-20--xs
+                %h4.g-font-size-22--xs.g-font-size-26--sm.g-color--white.g-margin-b-0--xs Lucas Richardson
+              %p.g-font-weight--700 CEO
+              %p Now that we've aligned the details, it's time to get things mapped out and organized. This part is really crucial in keeping the project in line to completion.
+          / End Speaker
+    / End Speakers
+    / Team
+    .row.g-row-col--0
+      .col-md-3.col-xs-6.g-full-width--xs
+        .wow.fadeInUp{"data-wow-delay" => ".1s", "data-wow-duration" => ".3"}
+          / Team
+          .s-team-v1
+            %img.img-responsive.g-width-100-percent--xs{:alt => "Image", :src => "img/400x400/03.jpg"}/
+            .g-text-center--xs.g-bg-color--white.g-padding-x-30--xs.g-padding-y-40--xs
+              %h2.g-font-size-18--xs.g-margin-b-5--xs Jack Daniels
+              %span.g-font-size-15--xs.g-color--text
+                %i Cardiology
+          / End Team
+      .col-md-3.col-xs-6.g-full-width--xs
+        .wow.fadeInUp{"data-wow-delay" => ".2s", "data-wow-duration" => ".3"}
+          / Team
+          .s-team-v1
+            %img.img-responsive.g-width-100-percent--xs{:alt => "Image", :src => "img/400x400/04.jpg"}/
+            .g-text-center--xs.g-bg-color--white.g-padding-x-30--xs.g-padding-y-40--xs
+              %h3.g-font-size-18--xs.g-margin-b-5--xs Anna Kusaikina
+              %span.g-font-size-15--xs.g-color--text
+                %i Pulmonology
+          / End Team
+      .col-md-3.col-xs-6.g-full-width--xs
+        .wow.fadeInUp{"data-wow-delay" => ".3s", "data-wow-duration" => ".3"}
+          / Team
+          .s-team-v1
+            %img.img-responsive.g-width-100-percent--xs{:alt => "Image", :src => "img/400x400/05.jpg"}/
+            .g-text-center--xs.g-bg-color--white.g-padding-x-30--xs.g-padding-y-40--xs
+              %h4.g-font-size-18--xs.g-margin-b-5--xs Lucas Richardson
+              %span.g-font-size-15--xs.g-color--text
+                %i Dental
+          / End Team
+      .col-md-3.col-xs-6.g-full-width--xs
+        .wow.fadeInUp{"data-wow-delay" => ".4s", "data-wow-duration" => ".3"}
+          / Team
+          .s-team-v1
+            %img.img-responsive.g-width-100-percent--xs{:alt => "Image", :src => "img/400x400/06.jpg"}/
+            .g-text-center--xs.g-bg-color--white.g-padding-x-30--xs.g-padding-y-40--xs
+              %h4.g-font-size-18--xs.g-margin-b-5--xs Kira Doe
+              %span.g-font-size-15--xs.g-color--text
+                %i Gynecology
+          / End Team
+    / End Team
+    / Feedback Form
+    .g-position--relative.g-bg-color--dark-light
+      .g-container--md.g-padding-y-80--xs.g-padding-y-125--sm
+        .g-text-center--xs.g-margin-b-80--xs
+          %p.text-uppercase.g-font-size-14--xs.g-font-weight--700.g-color--white-opacity.g-letter-spacing--2.g-margin-b-25--xs Contact Us
+          %h2.g-font-size-32--xs.g-font-size-36--md.g-color--white Get in Touch
+        .row.g-row-col--5.g-margin-b-80--xs
+          .col-xs-4.g-full-width--xs.g-margin-b-50--xs.g-margin-b-0--sm
+            .g-text-center--xs
+              %i.g-display-block--xs.g-font-size-40--xs.g-color--white-opacity.g-margin-b-30--xs.ti-email
+              %h4.g-font-size-18--xs.g-color--white.g-margin-b-5--xs Email
+              %p.g-color--white-opacity support@keenthemes.com
+          .col-xs-4.g-full-width--xs.g-margin-b-50--xs.g-margin-b-0--sm
+            .g-text-center--xs
+              %i.g-display-block--xs.g-font-size-40--xs.g-color--white-opacity.g-margin-b-30--xs.ti-map-alt
+              %h4.g-font-size-18--xs.g-color--white.g-margin-b-5--xs Address
+              %p.g-color--white-opacity 277 Bedford Avenue, Brooklyn
+          .col-xs-4.g-full-width--xs
+            .g-text-center--xs
+              %i.g-display-block--xs.g-font-size-40--xs.g-color--white-opacity.g-margin-b-30--xs.ti-headphone-alt
+              %h4.g-font-size-18--xs.g-color--white.g-margin-b-5--xs Call at
+              %p.g-color--white-opacity + (1) 001 389 3720
+        %form.center-block.g-width-500--sm.g-width-550--md
+          .g-margin-b-30--xs
+            %input.form-control.s-form-v3__input{:placeholder => "* Name", :type => "text"}/
+          .row.g-row-col-5.g-margin-b-50--xs
+            .col-sm-6.g-margin-b-30--xs.g-margin-b-0--md
+              %input.form-control.s-form-v3__input{:placeholder => "* Email", :type => "email"}/
+            .col-sm-6
+              %input.form-control.s-form-v3__input{:placeholder => "* Phone", :type => "text"}/
+          .g-margin-b-80--xs
+            %textarea.form-control.s-form-v3__input{:placeholder => "* Your message", :rows => "5"}
+          .g-text-center--xs
+            %button.text-uppercase.s-btn.s-btn--md.s-btn--white-bg.g-radius--50.g-padding-x-70--xs.g-margin-b-20--xs{:type => "submit"} Submit
+      %img.s-mockup-v2{:alt => "Mockup Image", :src => "img/mockups/pencil-01.png"}/
+    / End Feedback Form
+    / ========== END PAGE CONTENT ==========
+    / ========== FOOTER ==========
+    %footer.g-bg-color--dark
+      / Links
+      .g-hor-divider__dashed--white-opacity-lightest
+        .container.g-padding-y-80--xs
+          .row
+            .col-sm-2.g-margin-b-20--xs.g-margin-b-0--md
+              %ul.list-unstyled.g-ul-li-tb-5--xs.g-margin-b-0--xs
+                %li
+                  %a.g-font-size-15--xs.g-color--white-opacity{:href => "http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes"} Home
+                %li
+                  %a.g-font-size-15--xs.g-color--white-opacity{:href => "http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes"} About
+                %li
+                  %a.g-font-size-15--xs.g-color--white-opacity{:href => "http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes"} Work
+                %li
+                  %a.g-font-size-15--xs.g-color--white-opacity{:href => "http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes"} Contact
+            .col-sm-2.g-margin-b-20--xs.g-margin-b-0--md
+              %ul.list-unstyled.g-ul-li-tb-5--xs.g-margin-b-0--xs
+                %li
+                  %a.g-font-size-15--xs.g-color--white-opacity{:href => "http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes"} Twitter
+                %li
+                  %a.g-font-size-15--xs.g-color--white-opacity{:href => "http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes"} Facebook
+                %li
+                  %a.g-font-size-15--xs.g-color--white-opacity{:href => "http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes"} Instagram
+                %li
+                  %a.g-font-size-15--xs.g-color--white-opacity{:href => "http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes"} YouTube
+            .col-sm-2.g-margin-b-40--xs.g-margin-b-0--md
+              %ul.list-unstyled.g-ul-li-tb-5--xs.g-margin-b-0--xs
+                %li
+                  %a.g-font-size-15--xs.g-color--white-opacity{:href => "http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes"} Subscribe to Our Newsletter
+                %li
+                  %a.g-font-size-15--xs.g-color--white-opacity{:href => "http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes"} Privacy Policy
+                %li
+                  %a.g-font-size-15--xs.g-color--white-opacity{:href => "http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes"} Terms &amp; Conditions
+            .col-md-4.col-md-offset-2.col-sm-5.col-sm-offset-1.s-footer__logo.g-padding-y-50--xs.g-padding-y-0--md
+              %h3.g-font-size-18--xs.g-color--white Megakit
+              %p.g-color--white-opacity We are a creative studio focusing on culture, luxury, editorial &amp; art. Somewhere between sophistication and simplicity.
+      / End Links
+      / Copyright
+      .container.g-padding-y-50--xs
+        .row
+          .col-xs-6
+            %a{:href => "index.html"}
+              %img.g-width-100--xs.g-height-auto--xs{:alt => "Megakit Logo", :src => "img/logo.png"}/
+          .col-xs-6.g-text-right--xs
+            %p.g-font-size-14--xs.g-margin-b-0--xs.g-color--white-opacity-light
+              %a{:href => "http://keenthemes.com/preview/Megakit/"} Megakit
+              Theme Powered by:
+              %a{:href => "http://www.keenthemes.com/"} KeenThemes.com
+      / End Copyright
+    / ========== END FOOTER ==========
+    / Back To Top
+    %a.s-back-to-top.js__back-to-top{:href => "javascript:void(0);"}
+    / ========== JAVASCRIPTS (Load javascripts at bottom, this will reduce page load time) ==========
+    / Vendor
+    %script{:src => "vendor/jquery.min.js", :type => "text/javascript"}
+    %script{:src => "vendor/jquery.migrate.min.js", :type => "text/javascript"}
+    %script{:src => "vendor/bootstrap/js/bootstrap.min.js", :type => "text/javascript"}
+    %script{:src => "vendor/jquery.smooth-scroll.min.js", :type => "text/javascript"}
+    %script{:src => "vendor/jquery.back-to-top.min.js", :type => "text/javascript"}
+    %script{:src => "vendor/scrollbar/jquery.scrollbar.min.js", :type => "text/javascript"}
+    %script{:src => "vendor/jquery.parallax.min.js", :type => "text/javascript"}
+    %script{:src => "vendor/jquery.wow.min.js", :type => "text/javascript"}
+    / General Components and Settings
+    %script{:src => "js/global.min.js", :type => "text/javascript"}
+    %script{:src => "js/components/header-sticky.min.js", :type => "text/javascript"}
+    %script{:src => "js/components/scrollbar.min.js", :type => "text/javascript"}
+    %script{:src => "js/components/wow.min.js", :type => "text/javascript"}
+    / ========== END JAVASCRIPTS ==========
+  / End Body
