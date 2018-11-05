@@ -21,34 +21,7 @@
       Author URL: https://bootstrapmade.com
       \=======================================================
   %body
-    %header#header
-      %nav.navbar.navbar-default.navbar-static-top{:role => "banner"}
-        .container
-          .navbar-header
-            %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
-              %span.sr-only Toggle navigation
-              %span.icon-bar
-              %span.icon-bar
-              %span.icon-bar
-            .navbar-brand
-              %a{:href => "index.html"}
-                %h1 Day
-          .navbar-collapse.collapse
-            .menu
-              %ul.nav.nav-tabs{:role => "tablist"}
-                %li{:role => "presentation"}
-                  %a{:href => "index.html"} Home
-                %li{:role => "presentation"}
-                  %a{:href => "about.html"} About Us
-                %li{:role => "presentation"}
-                  %a{:href => "services.html"} Services
-                %li{:role => "presentation"}
-                  %a{:href => "gallery.html"} Gallery
-                %li{:role => "presentation"}
-                  %a.active{:href => "contact.html"} Contact
-        / /.container
-      / /nav
-    / /header
+    =render './nav'
     .map
       %iframe{:allowfullscreen => "", :frameborder => "0", :height => "380", :src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22864.11283411948!2d-73.96468908098944!3d40.630720240038435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbg!4v1540447494452", :style => "border:0", :width => "100%"}
     %section.contact-page
