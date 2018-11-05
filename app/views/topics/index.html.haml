@@ -1,331 +1,275 @@
 !!!
-%html.noIE{:lang => "en-US"}
-  / <![endif]
+%html{:lang => "en"}
   %head
-    %title Nevada Plus
-    / meta
-    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %meta{:content => "width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no", :name => "viewport"}/
-    / google fonts
-    %link{:href => "http://fonts.googleapis.com/css?family=Raleway:500,300", :rel => "stylesheet", :type => "text/css"}/
-    %link{:href => "http://fonts.googleapis.com/css?family=PT+Sans", :rel => "stylesheet"}/
-    %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans", :rel => "stylesheet", :type => "text/css"}/
-    %link{:href => "http://fonts.googleapis.com/css?family=Droid+Serif:regular,bold", :rel => "stylesheet"}/
-   
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    / The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+    %title Day - HTML Bootstrap Template
+
+      \=======================================================
+      Theme Name: Day
+      Theme URL: https://bootstrapmade.com/day-multipurpose-html-template-for-free/
+      Author: BootstrapMade
+      Author URL: https://bootstrapmade.com
+      \=======================================================
   %body
-    %header.top-header
+    %header#header
+      %nav#top-header-1.navbar.navbar-default.navbar-static-top{:role => "banner"}
+        .container
+          .navbar-header
+            %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+              %span.sr-only Toggle navigation
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+            .navbar-brand
+              %a{:href => "index.html"}
+                %h1 Day
+          .navbar-collapse.collapse
+            .menu
+              %ul.nav.nav-tabs{:role => "tablist"}
+                %li{:role => "presentation"}
+                  %a.active{:href => "index.html"} Home
+                %li{:role => "presentation"}
+                  %a{:href => "about.html"} About Us
+                %li{:role => "presentation"}
+                  %a{:href => "services.html"} Services
+                %li{:role => "presentation"}
+                  %a{:href => "gallery.html"} Gallery
+                %li{:role => "presentation"}
+                  %a{:href => "contact.html"} Contact
+        / /.container
+      / /nav
+    / /header
+    .slider
+      #about-slider
+        #carousel-slider.carousel.slide{"data-ride" => "carousel"}
+          / Indicators
+          %ol.carousel-indicators.visible-xs
+            %li.active{"data-slide-to" => "0", "data-target" => "#carousel-slider"}
+            %li{"data-slide-to" => "1", "data-target" => "#carousel-slider"}
+            %li{"data-slide-to" => "2", "data-target" => "#carousel-slider"}
+          .carousel-inner
+            .item.active
+              %img.img-responsive{:alt => "", :src => "/img/slide.jpg"}/
+              .carousel-caption
+                .wow.fadeInUp{"data-wow-delay" => "0.3s", "data-wow-offset" => "0"}
+                  %h2
+                    %span Clean &amp; Modern Design Template
+                .col-md-10.col-md-offset-1
+                  .wow.fadeInUp{"data-wow-delay" => "0.6s", "data-wow-offset" => "0"}
+                    %p Lorem ipsum dolor sit amet consectetur adipisicing
+                .wow.fadeInUp{"data-wow-delay" => "0.9s", "data-wow-offset" => "0"}
+                  %form.form-inline
+                    .form-group
+                      %button.btn.btn-primary.btn-lg{:name => "Live Demo", :required => "required", :type => "livedemo"} Live Demo
+                    .form-group
+                      %button.btn.btn-primary.btn-lg{:name => "Get Now", :required => "required", :type => "getnow"} Get Now
+            .item
+              %img.img-responsive{:alt => "", :src => "/img/slide.jpg"}/
+              .carousel-caption
+                .wow.fadeInUp{"data-wow-delay" => "1.0s", "data-wow-offset" => "0"}
+                  %h2 Fully Responsive
+                .col-md-10.col-md-offset-1
+                  .wow.fadeInUp{"data-wow-delay" => "0.6s", "data-wow-offset" => "0"}
+                    %p Lorem ipsum dolor sit amet consectetur adipisicing
+                .wow.fadeInUp{"data-wow-delay" => "1.6s", "data-wow-offset" => "0"}
+                  %form.form-inline
+                    .form-group
+                      %button.btn.btn-primary.btn-lg{:name => "purchase", :required => "required", :type => "livedemo"} Live Demo
+                    .form-group
+                      %button.btn.btn-primary.btn-lg{:name => "subscribe", :required => "required", :type => "getnow"} Get Now
+            .item
+              %img.img-responsive{:alt => "", :src => "/img/slide.jpg"}/
+              .carousel-caption
+                .wow.fadeInUp{"data-wow-delay" => "0.3s", "data-wow-offset" => "0"}
+                  %h2 学生会
+                .col-md-10.col-md-offset-1
+                  .wow.fadeInUp{"data-wow-delay" => "0.6s", "data-wow-offset" => "0"}
+                    %p Lorem ipsum dolor sit amet consectetur adipisicing
+                .wow.fadeInUp{"data-wow-delay" => "0.9s", "data-wow-offset" => "0"}
+                  %form.form-inline
+                    .form-group
+                      %button.btn.btn-primary.btn-lg{:name => "purchase", :required => "required", :type => "livedemo"} Live Demo
+                    .form-group
+                      %button.btn.btn-primary.btn-lg{:name => "subscribe", :required => "required", :type => "getnow"} Get Now
+          %a.left.carousel-control.hidden-xs{"data-slide" => "prev", :href => "#carousel-slider"}
+            %i.fa.fa-angle-left
+          %a.right.carousel-control.hidden-xs{"data-slide" => "next", :href => "#carousel-slider"}
+            %i.fa.fa-angle-right
+        / /#carousel-slider
+      / /#about-slider
+    / /#slider
+    .about
       .container
-        .row
-          .col-md-3.col-xs-5.col-sm-4.header-logo
+        .text-center
+          %h2 Quaerat quod voluptate consequuntur
+          .col-md-10.col-md-offset-1
+            %p
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat quod voluptate consequuntur ad quasi, dolores obcaecati ex aliquid, dolor provident accusamus omnis dolorum ipsam. Voluptatem ipsum expedita, corporis facilis laborum asperiores
+              nostrum! Amet porro numquam ratione temporibus quia dolorem sint lorem voluptates quasi mollitia.
+          .col-md-6.col-sm-6.col-xs-6
+            .btn-gamp
+              %a{:href => "#"} Learn More
+          .col-md-6.col-sm-6.col-xs-6
+            .gamp-btn
+              %a{:href => "#"} download
+    %hr/
+    .services
+      .container
+        .text-center
+          %h2 consectetur adipisicing elit
+        .col-md-3.wow.fadeInDown{"data-wow-delay" => "300ms", "data-wow-duration" => "1000ms"}
+          %i.fa.fa-heart-o
+          %h3 Fully Responsive
+          %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum nam numquam voluptates cumque inventore, quibusdam corporis consequatur amet.
+        .col-md-3.wow.fadeInDown{"data-wow-delay" => "600ms", "data-wow-duration" => "1000ms"}
+          %i.fa.fa-cloud
+          %h3 Retina Ready
+          %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum nam numquam voluptates cumque inventore, quibusdam corporis consequatur amet.
+        .col-md-3.wow.fadeInDown{"data-wow-delay" => "900ms", "data-wow-duration" => "1000ms"}
+          %i.fa.fa-book
+          %h3 Fresh and Clean
+          %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum nam numquam voluptates cumque inventore, quibusdam corporis consequatur amet.
+        .col-md-3.wow.fadeInDown{"data-wow-delay" => "1200ms", "data-wow-duration" => "1000ms"}
+          %i.fa.fa-gear
+          %h3 Easy to Customize
+          %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum nam numquam voluptates cumque inventore, quibusdam corporis consequatur amet.
+    %section.action
+      .container
+        .left-text.hidden-xs
+          %h4 Amet porro numquam ratione
+          %p
+            %em Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ut explicabo magni sapiente.
             %br/
-            %a{:href => "index.html"}
-              %h1.logo
-                Nevada
-                %span.logo-head Plus
-          .col-md-8.col-md-offset-1.col-xs-7
-            %nav.navbar.navbar-default#back-no
-              .container-fluid.nav-bar
-                / Brand and toggle get grouped for better mobile display
-                .navbar-header
-                  %button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
-                    %span.sr-only Toggle navigation
-                    %span.icon-bar
-                    %span.icon-bar
-                    %span.icon-bar
-                / Collect the nav links, forms, and other content for toggling
-                #bs-example-navbar-collapse-1.collapse.navbar-collapse.navbar-def
-                  %ul.nav.navbar-nav.navbar-right
-                    %li
-                      %a{:href => "#wrapper"}
-                        %i.fa.fa-home
-                        Home
-                    %li
-                      %a{:href => "#about"}
-                        %i.fa.fa-bookmark
-                        About
-                    %li
-                      %a{:href => "#portfolio"}
-                        %i.fa.fa-bookmark
-                        Portfolio
-                    %li
-                      %a{:href => "#services"}
-                        %i.fa.fa-tasks
-                        Service
-                    %li
-                      %a{:href => "#blog"}
-                        %i.fa.fa-wordpress
-                        Blog
-                    %li
-                      %a{:href => "#testimonials"}
-                        %i.fa.fa-thumbs-up
-                        Testimonial
-                / /navbar-collapse
-              / / .container-fluid
-    #wrapper
-      #header.content-block
-        /
-          <section class="top clearfix">
-          <div class="pull-left">
-          <h1><a class="logo" href="index.html">Nevada <span class="logo-head">Plus</span></a></h1>
-          </div>
-          <! <div class="pull-right">
-          <a class="toggleDrawer" href="#"><i class="fa fa-bars fa-2x"></i></a>
-          </div>
-          </section>
-        %section.center
-          .slogan
-            学生会
-          .secondary-slogan
-            The Nevada plus Theme By ThemeWagon.
-      / header
-      / About us
-      #about.about-us
-        .container.about-sec
-          %header.block-heading.cleafix
-            .title-page
-              %p.main-header About us
-              %p.sub-header#font-size-16 本会は、学生の自治自律の精神に基づく自発的活動を通じて以下のことを目的とする
-          .divide50
-          .row
-            .col-md-4.text-center
-              .aboutus-item
-                %i.aboutus-icon.fa.fa-plane
-                %h4.aboutus-title Great Transport
-                %p.aboutus-desc 学生生活を楽しく、豊かに、節度あるものとし、良き校風と伝統を創りあげること。
-            .col-md-4.text-center
-              .aboutus-item
-                %i.aboutus-icon.fa.fa-usd
-                %h4.aboutus-title Not Expensive
-                %p.aboutus-desc 心身の健康を助長し健全な趣味、豊かな教養を身につけ、思索と実践力に富む格調高い人間を創りあげること。
-            .col-md-4.text-center
-              .aboutus-item
-                %i.aboutus-icon.fa.fa-cutlery
-                %h4.aboutus-title Delicious Food
-                %p.aboutus-desc 学校生活における集団活動に積極的に参加し、協同的、民主的行動の態度を身につけること。 
-      / /About us
-      #portfolio.content-block
-        .container.portfolio-sec
-          %header.block-heading.cleafix
-            %a.btn.btn-o.btn-lg.pull-right{:href => "#"} View All
-            .title-page
-              %p.main-header 最新の活動
-              %p.sub-header Take a look at some of our recent products
-          %section.block-body
-            .row
-              .col-sm-4
-                %a.recent-work{:href => "#", :style => "background-image:url(/images/rikezyo.png)"}
-                  %span.btn.btn-o-white Lorem Rocks
-              .col-sm-4
-                %a.recent-work{:href => "#", :style => "background-image:url(/images/takkyu.jpg)"}
-                  %span.btn.btn-o-white Lorem Rocks
-              .col-sm-4
-                %a.recent-work{:href => "#", :style => "background-image:url(/images/tanka.jpg)"}
-                  %span.btn.btn-o-white Lorem Rocks
-            .row
-              .col-sm-4
-                %a.recent-work{:href => "#", :style => "background-image:url(/images/monodukuri.jpg)"}
-                  %span.btn.btn-o-white Lorem Rocks
-              .col-sm-4
-                %a.recent-work{:href => "#", :style => "background-image:url(/images/miraito.jpg)"}
-                  %span.btn.btn-o-white Lorem Rocks
-              .col-sm-4
-                %a.recent-work{:href => "#", :style => "background-image:url(/images/six_1-320x240.jpg)"}
-                  %span.btn.btn-o-white Lorem Rocks
-      / #portfolio
-      #services.content-block.parallax
-        .container.services-sec
-          .title-page
-            %p.main-header 学生会のサービス
-            %p.sub-header A little about what we do
-          %section.block-body
-            .row
-              .col-md-4
-                .service
-                  .bar
-                    %i.fa.fa-send-o
-                  %h2.service-head 予算のヒアリング
-                  %p In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit in lorem.
-              .col-md-4
-                .service
-                  .bar
-                    %i.fa.fa-heart-o
-                  %h2.service-head 学内トラブルの相談
-                  %p In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit in lorem.
-              .col-md-4
-                .service
-                  .bar
-                    %i.fa.fa-camera-retro
-                  %h2.service-head 各種イベントの実施
-                  %p In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit in lorem.
-      / #services
-      #blog.content-block
-        .container.blog-sec
-          %header.block-heading.cleafix
-            %a.btn.btn-o.btn-lg.pull-right{:href => "#"} View All
-            .title-page
-              %p.main-header 役員ブログ
-              %p.sub-header Keep up with the latest happenings.
-          %section.block-body
-            .row
-              .col-sm-4.blog-post
-                %img{:src => "/images/bike_water1-1000x600.jpg"}/
+            = succeed "Inventore" do
+              %br/
+        .right-image.hidden-xs
+    .gallery
+      .text-center
+        %h2 Gallery
+        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat quod voluptate consequuntur ad quasi, dolores obcaecati ex aliquid, dolor provident
+      .container
+        .col-md-4
+          %figure.effect-marley
+            %img.img-responsive{:alt => "", :src => "img/8.jpg"}/
+            %figcaption
+              %h4 sweet marley
+              %p Marley tried to convince her but she was not interested.
+        .col-md-4
+          %figure.effect-marley
+            %img.img-responsive{:alt => "", :src => "img/9.jpg"}/
+            %figcaption
+              %h4 sweet marley
+              %p Marley tried to convince her but she was not interested.
+        .col-md-4
+          %figure.effect-marley
+            %img.img-responsive{:alt => "", :src => "img/10.jpg"}/
+            %figcaption
+              %h4 sweet marley
+              %p Marley tried to convince her but she was not interested.
+      .container
+        .col-md-4
+          %figure.effect-marley
+            %img.img-responsive{:alt => "", :src => "img/11.jpg"}/
+            %figcaption
+              %h4 sweet marley
+              %p Marley tried to convince her but she was not interested.
+        .col-md-4
+          %figure.effect-marley
+            %img.img-responsive{:alt => "", :src => "img/12.jpg"}/
+            %figcaption
+              %h4 sweet marley
+              %p Marley tried to convince her but she was not interested.
+        .col-md-4
+          %figure.effect-marley
+            %img.img-responsive{:alt => "", :src => "img/13.jpg"}/
+            %figcaption
+              %h4 sweet marley
+              %p Marley tried to convince her but she was not interested.
+    %footer
+      .container
+        .col-md-4.wow.fadeInDown{"data-wow-delay" => "300ms", "data-wow-duration" => "1000ms"}
+          %h4 About Us
+          %p Day is tellus ac cursus commodo, mauesris condime ntum nibh, ut fermentum mas justo sitters.
+          .contact-info
+            %ul
+              %li
+                %i.fa.fa-home.fa>
+                Suite 54 Elizebth Street, Victoria State Newyork, USA
+              %li
+                %i.fa.fa-phone.fa
+                +38 000 129900
+              %li
+                %i.fa.fa-envelope.fa
+                info@domain.net
+        .col-md-4.wow.fadeInDown{"data-wow-delay" => "600ms", "data-wow-duration" => "1000ms"}
+          .text-center
+            %h4 Photo Gallery
+            %ul.sidebar-gallery
+              %li
                 %a{:href => "#"}
-                  %h2 クラスマッチを終えて
-                .date 3 Nov, 2014
-                %p In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit in lorem.
-                %a{:href => ""} Read More
-              .col-sm-4.blog-post
-                %img{:src => "/images/mac_glasses1-1000x600.jpg"}/
+                  %img{:alt => "", :src => "img/gallery1.png"}/
+              %li
                 %a{:href => "#"}
-                  %h2 あの日が来る、星が瞬く日
-                .date 3 Nov, 2014
-                %p In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit in lorem.
-                %a{:href => ""} Read More
-              .col-sm-4.blog-post
-                %img{:src => "/images/road-1000x600.jpg"}/
+                  %img{:alt => "", :src => "img/gallery2.png"}/
+              %li
                 %a{:href => "#"}
-                  %h2 体育祭を無くしてみた
-                .date 3 Nov, 2014
-                %p In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit in lorem.
-                %a{:href => ""} Read More
-      / #blog
-      #parallax.content-block.parallax
-        .container
-          %h3.call-action.pull-left In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis.
-          %a.pull-right.btn.btn-o-white.btn-lg{:href => "#"} Get a free quote
-      / #parallax
-      #testimonials.content-block
-        .container.testimonial-sec
-          %header.block-heading.cleafix
-            .title-page.pull-left
-              %p.main-header Testimonial
-              %p.sub-header 現役高専生の意見
-          %section.block-body
-            .row
-              #carousel-example-generic.carousel.slide{"data-ride" => "carousel"}
-                / Indicators
-                %ol.carousel-indicators
-                  %li.active{"data-slide-to" => "0", "data-target" => "#carousel-example-generic"}
-                  %li{"data-slide-to" => "1", "data-target" => "#carousel-example-generic"}
-                  %li{"data-slide-to" => "2", "data-target" => "#carousel-example-generic"}
-                / /.carousel-indicators
-                / Wrapper for slides
-                .carousel-inner{:role => "listbox"}
-                  .item.active
-                    .img-center
-                      %img.img-circle.circular-img{:src => "/images/01_200x200.png"}/
-                    %h3
-                      体育祭が無くなってとても残念だ。来年はぜひ体育祭を再開してほしい
-                  / /.item
-                  .item
-                    .img-center
-                      %img.img-circle.circular-img{:src => "/images/02_200x200.png"}/
-                    %h3
-                      高専のカリキュラムは崩壊気味だ。学生を無視した強引なカリキュラム変更を繰り返してもいい教育は生まれない
-                  / /.item
-                  .item
-                    .img-center
-                      %img.img-circle.circular-img{:src => "/images/03_200x200.png"}/
-                    %h3
-                      今日は家に帰ってゲームしようと思うんだ。
-                  / /.item
-                / /.carousel-inner
-              / /.carousel slide
-          / /.block-body
-      / /#testimonials
-      #footer.content-block
-        .container
-          .row
-            .col-sm-4.blog-post
-              %h2.footer-block 意見がありますか？
-              %p Praesent lacinia dapibus, accumsan vesti bulum. Pellen tesque molestie mollis.
-              %p
-                共催・提携や取材のご依頼、ご質問等は下記のフォームよりお気軽にお問い合わせください。
-              %p お問い合わせ内容の確認後、担当者よりご連絡させて頂きます。
-              %p 採用についてのご連絡は、こちらからお願いします。
-
-              %p Estibulum dapibus, maurimalesfames ac turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Aliquam erat ac ipsum. Integer aliquam purus ultricies gravida vitae...
-            .col-sm-4.blog-post
-              %h2.footer-block メッセージを送る
-              %form#contactForm{:action => "contact-form.php", :method => "post", :name => "contactform", :role => "form"}
-                .form-group
-                  %input#name.form-control.form-control-white{:name => "name", :placeholder => "名前", :required => "", :type => "text"}/
-                .form-group
-                  %input#email.form-control.form-control-white{:name => "email", :placeholder => "メールアドレス", :required => "", :type => "email"}/
-                .form-group
-                  %textarea#message.form-control.form-control-white{:name => "massage", :placeholder => "メッセージ", :required => ""}
-                #contactFormResponse
-                .form-group
-                  %input#cfsubmit.text-center.btn.btn-o-white{:type => "submit", :value => "Say Hello"}/
-            .col-sm-4.blog-post
-              %h2.footer-block お問い合わせ先
-              %ul
-                %li.address-sub
-                  %i.fa.fa-map-marker>
-                  Office Address
-                %p
-                  高知高専　学生食堂横
-                %li.address-sub
-                  %i.fa.fa-phone>
-                  Phone
-                %p
-                  Local: 1-800-123-hello
-                  %br/
-                  Mobile: 1-800-123-hello
-                %li.address-sub
-                  %i.fa.fa-envelope-o>
-                  Email Address
-                %p
-                  %a{:href => "mailto:info@themewagon.com"} info@themewagon.com
-                  %br/
-                  %a{:href => "http://www.themewagon.com/"} www.themewagon.com
-              .social
+                  %img{:alt => "", :src => "img/gallery3.png"}/
+              %li
                 %a{:href => "#"}
-                  %i.fa.fa-twitter
+                  %img{:alt => "", :src => "img/gallery4.png"}/
+              %li
                 %a{:href => "#"}
+                  %img{:alt => "", :src => "img/gallery5.png"}/
+              %li
+                %a{:href => "#"}
+                  %img{:alt => "", :src => "img/gallery6.png"}/
+        .col-md-4.wow.fadeInDown{"data-wow-delay" => "900ms", "data-wow-duration" => "1000ms"}
+          %div
+            %h4 Newsletter Registration
+            %p Subscribe today to receive the latest Day news via email. You may unsubscribe from this service at any time
+            .btn-gamp
+              %input#exampleInputEmail3.form-control{:placeholder => "Enter Email", :type => "email"}/
+            .btn-gamp
+              %a.btn.btn-default{:type => "submit"} Subscribe
+    .sub-footer
+      .container
+        .social-icon
+          .col-md-4
+            %ul.social-network
+              %li
+                %a.fb.tool-tip{:href => "#", :title => "Facebook"}
                   %i.fa.fa-facebook
-                %a{:href => "#"}
-                  %i.fa.fa-instagram
-                %a{:href => "#"}
-                  %i.fa.fa-pinterest-p
-                %a{:href => "#"}
+              %li
+                %a.twitter.tool-tip{:href => "#", :title => "Twitter"}
+                  %i.fa.fa-twitter
+              %li
+                %a.gplus.tool-tip{:href => "#", :title => "Google Plus"}
                   %i.fa.fa-google-plus
-                %a{:href => "#"}
-                  %i.fa.fa-skype
-      #footer.content-block.footer-bottom
-        .container
-          .row
-            .col-xs-6 © Copyright Nevada Plus 2015
-            .col-xs-6.text-right
-              Theme by
-              %a{:href => "http://www.themewagon.com/", :target => "_blink"} ThemeWagon
-      / #footer
-    / /#wrapper
+              %li
+                %a.linkedin.tool-tip{:href => "#", :title => "Linkedin"}
+                  %i.fa.fa-linkedin
+              %li
+                %a.ytube.tool-tip{:href => "#", :title => "You Tube"}
+                  %i.fa.fa-youtube-play
+        .col-md-4.col-md-offset-4
+          .copyright
+            © Day Theme. All Rights Reserved.
+            .credits
+              /
+                All the links in the footer should remain intact.
+                You can delete the links only if you purchased the pro version.
+                Licensing information: https://bootstrapmade.com/license/
+                Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Day
+              Designed by
+              %a{:href => "https://bootstrapmade.com/"} BootstrapMade
+    / jQuery (necessary for Bootstrap's JavaScript plugins)
+    -# %script{:src => "js/jquery.js"}
+    / Include all compiled plugins (below), or include individual files as needed
+    -# %script{:src => "js/bootstrap.min.js"}
+    -# %script{:src => "js/wow.min.js"}
     :javascript
-      jQuery(document).ready(function($){
-
-        	$(window).scroll(function() {
-        		
-        		console.log("asdf");
-
-      		if ($(window).scrollTop() > 100 ){
-          
-       		$('.top-header').addClass('shows');
-          
-        		} else {
-          
-         	 	$('.top-header').removeClass('shows');
-          
-       		};   	
-      	});
-
-        });
-
-      jQuery('.scroll').on('click', function(e){		
-      		e.preventDefault()
-          
-        jQuery('html, body').animate({
-            scrollTop : jQuery(this.hash).offset().top
-          }, 1500);
-      });
+      wow = new WOW({}).init();

@@ -1,0 +1,337 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    / The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+    %title Day - HTML Bootstrap Template
+    / Bootstrap
+    %link{:href => "css/bootstrap.min.css", :rel => "stylesheet"}/
+    %link{:href => "css/font-awesome.min.css", :rel => "stylesheet"}/
+    %link{:href => "css/animate.css", :rel => "stylesheet"}/
+    %link{:href => "css/animate.min.css", :rel => "stylesheet"}/
+    %link{:href => "css/style.css", :rel => "stylesheet"}/
+    /
+      \=======================================================
+      Theme Name: Day
+      Theme URL: https://bootstrapmade.com/day-multipurpose-html-template-for-free/
+      Author: BootstrapMade
+      Author URL: https://bootstrapmade.com
+      \=======================================================
+  %body
+    %header#header
+      %nav.navbar.navbar-default.navbar-static-top{:role => "banner"}
+        .container
+          .navbar-header
+            %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+              %span.sr-only Toggle navigation
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+            .navbar-brand
+              %a{:href => "index.html"}
+                %h1 Day
+          .navbar-collapse.collapse
+            .menu
+              %ul.nav.nav-tabs{:role => "tablist"}
+                %li{:role => "presentation"}
+                  %a{:href => "index.html"} Home
+                %li{:role => "presentation"}
+                  %a.active{:href => "about.html"} About Us
+                %li{:role => "presentation"}
+                  %a{:href => "services.html"} Services
+                %li{:role => "presentation"}
+                  %a{:href => "gallery.html"} Gallery
+                %li{:role => "presentation"}
+                  %a{:href => "contact.html"} Contact
+        / /.container
+      / /nav
+    / /header
+    .about
+      .container
+        .text-center
+          %h2 Quaerat quod voluptate consequuntur
+          .col-md-10.col-md-offset-1
+            %p
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat quod voluptate consequuntur ad quasi, dolores obcaecati ex aliquid, dolor provident accusamus omnis dolorum ipsam. Voluptatem ipsum expedita, corporis facilis laborum asperiores
+              nostrum! Amet porro numquam ratione temporibus quia dolorem sint lorem voluptates quasi mollitia.
+          .col-md-6.col-sm-6.col-xs-6
+            .btn-gamp
+              %a{:href => "#"} Learn More
+          .col-md-6.col-sm-6.col-xs-6
+            .gamp-btn
+              %a{:href => "#"} download
+    %hr/
+    %section#about-us
+      .container
+        .text-center.wow.fadeInDown
+          %h2 Skills
+          %p
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+            %br/
+            et dolore magna aliqua. Ut enim ad minim veniam
+        .skill-wrap.clearfix
+          .row
+            .col-sm-3
+              .sinlge-skill.wow.fadeInDown{"data-wow-delay" => "300ms", "data-wow-duration" => "1000ms"}
+                .joomla-skill
+                  %p
+                    %em 85%
+                  %p Joomla
+            .col-sm-3
+              .sinlge-skill.wow.fadeInDown{"data-wow-delay" => "600ms", "data-wow-duration" => "1000ms"}
+                .html-skill
+                  %p
+                    %em 95%
+                  %p HTML
+            .col-sm-3
+              .sinlge-skill.wow.fadeInDown{"data-wow-delay" => "900ms", "data-wow-duration" => "1000ms"}
+                .css-skill
+                  %p
+                    %em 80%
+                  %p CSS
+            .col-sm-3
+              .sinlge-skill.wow.fadeInDown{"data-wow-delay" => "1200ms", "data-wow-duration" => "1000ms"}
+                .wp-skill
+                  %p
+                    %em 90%
+                  %p Wordpress
+        / our-team
+        .team
+          .text-center.wow.fadeInDown
+            %h2 Team of Day
+            %p
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+              %br/
+              et dolore magna aliqua. Ut enim ad minim veniam
+          .row.clearfix
+            .col-md-4.col-sm-6
+              .single-profile-top.wow.fadeInDown{"data-wow-delay" => "300ms", "data-wow-duration" => "1000ms"}
+                .media
+                  .pull-left
+                    %a{:href => "#"}
+                      %img.media-object{:alt => "", :src => "img/man1.jpg"}/
+                  .media-body
+                    %h4 Jhon Doe
+                    %h5 Founder and CEO
+                    %ul.tag.clearfix
+                      %li.btn
+                        %a{:href => "#"} Web
+                      %li.btn
+                        %a{:href => "#"} Ui
+                      %li.btn
+                        %a{:href => "#"} Ux
+                      %li.btn
+                        %a{:href => "#"} Photoshop
+                    %ul.social_icons
+                      %li
+                        %a{:href => "#"}
+                          %i.fa.fa-facebook
+                      %li
+                        %a{:href => "#"}
+                          %i.fa.fa-twitter
+                      %li
+                        %a{:href => "#"}
+                          %i.fa.fa-google-plus
+                / /.media
+                %p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+            / /.col-lg-4
+            .col-md-4.col-sm-6.col-md-offset-2
+              .single-profile-top.wow.fadeInDown{"data-wow-delay" => "300ms", "data-wow-duration" => "1000ms"}
+                .media
+                  .pull-left
+                    %a{:href => "#"}
+                      %img.media-object{:alt => "", :src => "img/man2.jpg"}/
+                  .media-body
+                    %h4 Jhon Doe
+                    %h5 Founder and CEO
+                    %ul.tag.clearfix
+                      %li.btn
+                        %a{:href => "#"} Web
+                      %li.btn
+                        %a{:href => "#"} Ui
+                      %li.btn
+                        %a{:href => "#"} Ux
+                      %li.btn
+                        %a{:href => "#"} Photoshop
+                    %ul.social_icons
+                      %li
+                        %a{:href => "#"}
+                          %i.fa.fa-facebook
+                      %li
+                        %a{:href => "#"}
+                          %i.fa.fa-twitter
+                      %li
+                        %a{:href => "#"}
+                          %i.fa.fa-google-plus
+                / /.media
+                %p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+            / /.col-lg-4
+          / /.row
+          .row.team-bar
+            .first-one-arrow.hidden-xs
+              %hr/
+            .first-arrow.hidden-xs
+              %hr/
+              %i.fa.fa-angle-up
+            .second-arrow.hidden-xs
+              %hr/
+              %i.fa.fa-angle-down
+            .third-arrow.hidden-xs
+              %hr/
+              %i.fa.fa-angle-up
+            .fourth-arrow.hidden-xs
+              %hr/
+              %i.fa.fa-angle-down
+          / skill_border
+          .row.clearfix
+            .col-md-4.col-sm-6.col-md-offset-2
+              .single-profile-bottom.wow.fadeInUp{"data-wow-delay" => "600ms", "data-wow-duration" => "1000ms"}
+                .media
+                  .pull-left
+                    %a{:href => "#"}
+                      %img.media-object{:alt => "", :src => "img/man3.jpg"}/
+                  .media-body
+                    %h4 Jhon Doe
+                    %h5 Founder and CEO
+                    %ul.tag.clearfix
+                      %li.btn
+                        %a{:href => "#"} Web
+                      %li.btn
+                        %a{:href => "#"} Ui
+                      %li.btn
+                        %a{:href => "#"} Ux
+                      %li.btn
+                        %a{:href => "#"} Photoshop
+                    %ul.social_icons
+                      %li
+                        %a{:href => "#"}
+                          %i.fa.fa-facebook
+                      %li
+                        %a{:href => "#"}
+                          %i.fa.fa-twitter
+                      %li
+                        %a{:href => "#"}
+                          %i.fa.fa-google-plus
+                / /.media
+                %p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+            .col-md-4.col-sm-6.col-md-offset-2
+              .single-profile-bottom.wow.fadeInUp{"data-wow-delay" => "600ms", "data-wow-duration" => "1000ms"}
+                .media
+                  .pull-left
+                    %a{:href => "#"}
+                      %img.media-object{:alt => "", :src => "img/man4.jpg"}/
+                  .media-body
+                    %h4 Jhon Doe
+                    %h5 Founder and CEO
+                    %ul.tag.clearfix
+                      %li.btn
+                        %a{:href => "#"} Web
+                      %li.btn
+                        %a{:href => "#"} Ui
+                      %li.btn
+                        %a{:href => "#"} Ux
+                      %li.btn
+                        %a{:href => "#"} Photoshop
+                    %ul.social_icons
+                      %li
+                        %a{:href => "#"}
+                          %i.fa.fa-facebook
+                      %li
+                        %a{:href => "#"}
+                          %i.fa.fa-twitter
+                      %li
+                        %a{:href => "#"}
+                          %i.fa.fa-google-plus
+                / /.media
+                %p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+          / /.row
+        / section
+      / /.container
+    / /about-us
+    %footer
+      .container
+        .col-md-4.wow.fadeInDown{"data-wow-delay" => "300ms", "data-wow-duration" => "1000ms"}
+          %h4 About Us
+          %p Day is tellus ac cursus commodo, mauesris condime ntum nibh, ut fermentum mas justo sitters.
+          .contact-info
+            %ul
+              %li
+                %i.fa.fa-home.fa>
+                Suite 54 Elizebth Street, Victoria State Newyork, USA
+              %li
+                %i.fa.fa-phone.fa
+                +38 000 129900
+              %li
+                %i.fa.fa-envelope.fa
+                info@domain.net
+        .col-md-4.wow.fadeInDown{"data-wow-delay" => "600ms", "data-wow-duration" => "1000ms"}
+          .text-center
+            %h4 Photo Gallery
+            %ul.sidebar-gallery
+              %li
+                %a{:href => "#"}
+                  %img{:alt => "", :src => "img/gallery1.png"}/
+              %li
+                %a{:href => "#"}
+                  %img{:alt => "", :src => "img/gallery2.png"}/
+              %li
+                %a{:href => "#"}
+                  %img{:alt => "", :src => "img/gallery3.png"}/
+              %li
+                %a{:href => "#"}
+                  %img{:alt => "", :src => "img/gallery4.png"}/
+              %li
+                %a{:href => "#"}
+                  %img{:alt => "", :src => "img/gallery5.png"}/
+              %li
+                %a{:href => "#"}
+                  %img{:alt => "", :src => "img/gallery6.png"}/
+        .col-md-4.wow.fadeInDown{"data-wow-delay" => "900ms", "data-wow-duration" => "1000ms"}
+          %div
+            %h4 Newsletter Registration
+            %p Subscribe today to receive the latest Day news via email. You may unsubscribe from this service at any time
+            .btn-gamp
+              %input#exampleInputEmail3.form-control{:placeholder => "Enter Email", :type => "email"}/
+            .btn-gamp
+              %a.btn.btn-default{:type => "submit"} Subscribe
+        .sub-footer
+          .container
+            .social-icon
+              .col-md-4
+                %ul.social-network
+                  %li
+                    %a.fb.tool-tip{:href => "#", :title => "Facebook"}
+                      %i.fa.fa-facebook
+                  %li
+                    %a.twitter.tool-tip{:href => "#", :title => "Twitter"}
+                      %i.fa.fa-twitter
+                  %li
+                    %a.gplus.tool-tip{:href => "#", :title => "Google Plus"}
+                      %i.fa.fa-google-plus
+                  %li
+                    %a.linkedin.tool-tip{:href => "#", :title => "Linkedin"}
+                      %i.fa.fa-linkedin
+                  %li
+                    %a.ytube.tool-tip{:href => "#", :title => "You Tube"}
+                      %i.fa.fa-youtube-play
+            .col-md-4.col-md-offset-4
+              .copyright
+                © Day Theme. All Rights Reserved.
+                .credits
+                  /
+                    All the links in the footer should remain intact.
+                    You can delete the links only if you purchased the pro version.
+                    Licensing information: https://bootstrapmade.com/license/
+                    Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Day
+                  Designed by
+                  %a{:href => "https://bootstrapmade.com/"} BootstrapMade
+        / jQuery (necessary for Bootstrap's JavaScript plugins)
+        %script{:src => "js/jquery.js"}
+        / Include all compiled plugins (below), or include individual files as needed
+        %script{:src => "js/bootstrap.min.js"}
+        %script{:src => "js/wow.min.js"}
+        :javascript
+          wow = new WOW({}).init();
