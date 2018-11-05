@@ -1,15 +1,30 @@
-.navbar-collapse.collapse
-  .menu
-    %ul.nav.nav-tabs{:role => "tablist"}
-      %li{:role => "presentation"}
-        = link_to root_path, class: "avtive" do
-          Home
-      %li{:role => "presentation"}
-        = link_to about_index_path do
-          About to
-      %li{:role => "presentation"}
-        %a{:href => "services.html"} Services
-      %li{:role => "presentation"}
-        %a{:href => "gallery.html"} Gallery
-      %li{:role => "presentation"}
-        %a{:href => "contact.html"} Contact
+%header#header
+  %nav.navbar.navbar-default.navbar-static-top{:role => "banner"}
+    .container
+      .navbar-header
+        %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        .navbar-brand
+          %a{:href => "index.html"}
+            %h1 Day
+      .navbar-collapse.collapse
+        .menu
+          %ul.nav.nav-tabs{:role => "tablist"}
+            %li{:role => "presentation"}
+              = link_to root_path, class: "avtive" do
+                Home
+            %li{:role => "presentation"}
+              = link_to about_index_path do
+                About to
+            %li{:role => "presentation"}
+              = link_to service_index_path do
+                Services
+            %li{:role => "presentation"}
+              = link_to gallery_index_path do
+                Gallery
+            %li{:role => "presentation"}
+              = link_to contact_index_path do
+                Contact

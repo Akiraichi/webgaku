@@ -9,22 +9,8 @@
     %title 高知高専学生会
 
   %body
-    %header#header
-      %nav#top-header-1.navbar.navbar-default.navbar-static-top{:role => "banner"}
-        .container
-          .navbar-header
-            %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
-              %span.sr-only Toggle navigation
-              %span.icon-bar
-              %span.icon-bar
-              %span.icon-bar
-            .navbar-brand
-              %a{:href => "index.html"}
-                %h1 学生会
-          =render './nav'
-        / /.container
-      / /nav
-    / /header
+    =render './nav'
+
     .slider
       #about-slider
         #carousel-slider.carousel.slide{"data-ride" => "carousel"}
