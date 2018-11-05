@@ -5,52 +5,10 @@
     %meta{:charset => "utf-8"}/
     %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
     %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
-    / The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
     %title Day - HTML Bootstrap Template
-    / Bootstrap
-    %link{:href => "css/bootstrap.min.css", :rel => "stylesheet"}/
-    %link{:href => "css/font-awesome.min.css", :rel => "stylesheet"}/
-    %link{:href => "css/animate.css", :rel => "stylesheet"}/
-    %link{:href => "css/animate.min.css", :rel => "stylesheet"}/
-    %link{:href => "css/style.css", :rel => "stylesheet"}/
-    /
-      \=======================================================
-      Theme Name: Day
-      Theme URL: https://bootstrapmade.com/day-multipurpose-html-template-for-free/
-      Author: BootstrapMade
-      Author URL: https://bootstrapmade.com
-      \=======================================================
   %body
     =render './nav'
     .map
       %iframe{:allowfullscreen => "", :frameborder => "0", :height => "380", :src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22864.11283411948!2d-73.96468908098944!3d40.630720240038435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbg!4v1540447494452", :style => "border:0", :width => "100%"}
-    %section.contact-page
-      .container
-        .text-center
-          %h2 Drop Your Message
-          %p Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        .row.contact-wrap
-          .col-md-6.col-md-offset-3
-            #sendmessage Your message has been sent. Thank you!
-            #errormessage
-            %form.contactForm{:action => "", :method => "post", :role => "form"}
-              .form-group
-                %input#name.form-control{"data-msg" => "Please enter at least 4 chars", "data-rule" => "minlen:4", :name => "name", :placeholder => "Your Name", :type => "text"}/
-                .validation
-              .form-group
-                %input#email.form-control{"data-msg" => "Please enter a valid email", "data-rule" => "email", :name => "email", :placeholder => "Your Email", :type => "email"}/
-                .validation
-              .form-group
-                %input#subject.form-control{"data-msg" => "Please enter at least 8 chars of subject", "data-rule" => "minlen:4", :name => "subject", :placeholder => "Subject", :type => "text"}/
-                .validation
-              .form-group
-                %textarea.form-control{"data-msg" => "Please write something for us", "data-rule" => "required", :name => "message", :placeholder => "Message", :rows => "5"}
-                .validation
-              .text-center
-                %button.btn.btn-primary.btn-lg{:name => "submit", :required => "required", :type => "submit"}
-                  Submit
-                  Message
-        / /.row
-      / /.container
-    / /#contact-page
+    =render 'contact'
     =render './footer'

@@ -5,66 +5,8 @@
     %meta{:charset => "utf-8"}/
     %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
     %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
-    / The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
     %title Day - HTML Bootstrap Template
-    / Bootstrap
-    %link{:href => "css/bootstrap.min.css", :rel => "stylesheet"}/
-    %link{:href => "css/font-awesome.min.css", :rel => "stylesheet"}/
-    %link{:href => "css/animate.css", :rel => "stylesheet"}/
-    %link{:href => "css/animate.min.css", :rel => "stylesheet"}/
-    %link{:href => "css/style.css", :rel => "stylesheet"}/
-    /
-      \=======================================================
-      Theme Name: Day
-      Theme URL: https://bootstrapmade.com/day-multipurpose-html-template-for-free/
-      Author: BootstrapMade
-      Author URL: https://bootstrapmade.com
-      \=======================================================
   %body
     =render './nav'
-    .gallery
-      .text-center
-        %h2 Gallery
-        %p
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat quod voluptate consequuntur ad quasi,
-          %br/
-          dolores obcaecati ex aliquid, dolor provident
-      .container
-        .col-md-4
-          %figure.effect-marley
-            %img.img-responsive{:alt => "", :src => "img/8.jpg"}/
-            %figcaption
-              %h4 sweet marley
-              %p Marley tried to convince her but she was not interested.
-        .col-md-4
-          %figure.effect-marley
-            %img.img-responsive{:alt => "", :src => "img/9.jpg"}/
-            %figcaption
-              %h4 sweet marley
-              %p Marley tried to convince her but she was not interested.
-        .col-md-4
-          %figure.effect-marley
-            %img.img-responsive{:alt => "", :src => "img/10.jpg"}/
-            %figcaption
-              %h4 sweet marley
-              %p Marley tried to convince her but she was not interested.
-      .container
-        .col-md-4
-          %figure.effect-marley
-            %img.img-responsive{:alt => "", :src => "img/11.jpg"}/
-            %figcaption
-              %h4 sweet marley
-              %p Marley tried to convince her but she was not interested.
-        .col-md-4
-          %figure.effect-marley
-            %img.img-responsive{:alt => "", :src => "img/12.jpg"}/
-            %figcaption
-              %h4 sweet marley
-              %p Marley tried to convince her but she was not interested.
-        .col-md-4
-          %figure.effect-marley
-            %img.img-responsive{:alt => "", :src => "img/13.jpg"}/
-            %figcaption
-              %h4 sweet marley
-              %p Marley tried to convince her but she was not interested.
+    =render './gallery'
     =render './footer'

@@ -1,0 +1,26 @@
+%section.contact-page
+  .container
+    .text-center
+      %h2 Drop Your Message
+      %p Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    .row.contact-wrap
+      .col-md-6.col-md-offset-3
+        #sendmessage Your message has been sent. Thank you!
+        #errormessage
+        %form.contactForm{:action => "", :method => "post", :role => "form"}
+          .form-group
+            %input#name.form-control{"data-msg" => "Please enter at least 4 chars", "data-rule" => "minlen:4", :name => "name", :placeholder => "Your Name", :type => "text"}/
+            .validation
+          .form-group
+            %input#email.form-control{"data-msg" => "Please enter a valid email", "data-rule" => "email", :name => "email", :placeholder => "Your Email", :type => "email"}/
+            .validation
+          .form-group
+            %input#subject.form-control{"data-msg" => "Please enter at least 8 chars of subject", "data-rule" => "minlen:4", :name => "subject", :placeholder => "Subject", :type => "text"}/
+            .validation
+          .form-group
+            %textarea.form-control{"data-msg" => "Please write something for us", "data-rule" => "required", :name => "message", :placeholder => "Message", :rows => "5"}
+            .validation
+          .text-center
+            %button.btn.btn-primary.btn-lg{:name => "submit", :required => "required", :type => "submit"}
+              Submit
+              Message
