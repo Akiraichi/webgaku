@@ -1,0 +1,15 @@
+.navbar-collapse.collapse
+  .menu
+    %ul.nav.nav-tabs{:role => "tablist"}
+      %li{:role => "presentation"}
+        = link_to root_path, class: "avtive" do
+          Home
+      %li{:role => "presentation"}
+        = link_to about_index_path do
+          About to
+      %li{:role => "presentation"}
+        %a{:href => "services.html"} Services
+      %li{:role => "presentation"}
+        %a{:href => "gallery.html"} Gallery
+      %li{:role => "presentation"}
+        %a{:href => "contact.html"} Contact

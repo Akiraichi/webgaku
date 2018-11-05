@@ -33,19 +33,7 @@
             .navbar-brand
               %a{:href => "index.html"}
                 %h1 Day
-          .navbar-collapse.collapse
-            .menu
-              %ul.nav.nav-tabs{:role => "tablist"}
-                %li{:role => "presentation"}
-                  %a{:href => "index.html"} Home
-                %li{:role => "presentation"}
-                  %a.active{:href => "about.html"} About Us
-                %li{:role => "presentation"}
-                  %a{:href => "services.html"} Services
-                %li{:role => "presentation"}
-                  %a{:href => "gallery.html"} Gallery
-                %li{:role => "presentation"}
-                  %a{:href => "contact.html"} Contact
+          =render './nav'
         / /.container
       / /nav
     / /header
