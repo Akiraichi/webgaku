@@ -35,3 +35,24 @@
     .col-md-4.col-sm-6.col-md-offset-2
       .single-profile-bottom.wow.fadeInUp{"data-wow-delay" => "600ms", "data-wow-duration" => "1000ms"}
         =render 'media',member: @members[6]
+  
+  .row.clearfix
+    .col-md-4.col-sm-6
+      .single-profile-top.wow.fadeInDown{"data-wow-delay" => "300ms", "data-wow-duration" => "1000ms"}
+        =render 'media',member: @members[7]
+  .row.team-bar
+    .first-one-arrow.hidden-xs
+      %hr/
+    .first-arrow.hidden-xs
+      %hr/
+      %i.fa.fa-angle-up
+    .second-arrow.hidden-xs
+      %hr/
+      %i.fa.fa-angle-down
+    .third-arrow.hidden-xs
+      %hr/
+      %i.fa.fa-angle-up
+    .fourth-arrow.hidden-xs
+      %hr/
+      %i.fa.fa-angle-down
+ 

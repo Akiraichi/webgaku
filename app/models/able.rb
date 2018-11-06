@@ -1,0 +1,2 @@
+class Able < ApplicationRecord
+end

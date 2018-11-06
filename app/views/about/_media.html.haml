@@ -9,13 +9,18 @@
       =member.position
     %ul.tag.clearfix
       %li.btn
-        %a{:href => "#"} 交渉術
+        %a{:href => "#"} 
+          =member.skill1
       %li.btn
-        %a{:href => "#"} 先見性
+        %a{:href => "#"}
+          =member.skill2
       %li.btn
-        %a{:href => "#"} 会話術
-      %li.btn
-        %a{:href => "#"} みため
+        %a{:href => "#"}
+          =member.skill3
+      -if member.skill4 != nil
+        %li.btn
+          %a{:href => "#"}
+            =member.skill4
     %ul.social_icons
       %li
         %a{:href => "#"}
