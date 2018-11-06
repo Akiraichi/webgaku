@@ -1,0 +1,32 @@
+.media
+  .pull-left
+    %a{:href => "#"}
+      %img.media-object{:alt => "", :src => "img/#{member.image_url}"}/
+  .media-body
+    %h4
+      = member.name
+    %h5 
+      =member.position
+    %ul.tag.clearfix
+      %li.btn
+        %a{:href => "#"} 交渉術
+      %li.btn
+        %a{:href => "#"} 先見性
+      %li.btn
+        %a{:href => "#"} 会話術
+      %li.btn
+        %a{:href => "#"} みため
+    %ul.social_icons
+      %li
+        %a{:href => "#"}
+          %i.fa.fa-facebook
+      %li
+        %a{:href => "#"}
+          %i.fa.fa-twitter
+      %li
+        %a{:href => "#"}
+          %i.fa.fa-google-plus
+/ /.media
+%p 
+  =member.comment
+/ /.col-lg-4

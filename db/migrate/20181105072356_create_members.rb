@@ -8,7 +8,6 @@ class CreateMembers < ActiveRecord::Migration[5.0]
       t.string :facebook
       t.string :twitter
       t.string :image_url
-
       t.timestamps
     end
   end

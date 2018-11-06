@@ -8,67 +8,10 @@
   .row.clearfix
     .col-md-4.col-sm-6
       .single-profile-top.wow.fadeInDown{"data-wow-delay" => "300ms", "data-wow-duration" => "1000ms"}
-        .media
-          .pull-left
-            %a{:href => "#"}
-              %img.media-object{:alt => "", :src => "img/man1.jpg"}/
-          .media-body
-            %h4 平田かれん
-            %h5 会長
-            %ul.tag.clearfix
-              %li.btn
-                %a{:href => "#"} Web
-              %li.btn
-                %a{:href => "#"} Ui
-              %li.btn
-                %a{:href => "#"} Ux
-              %li.btn
-                %a{:href => "#"} Photoshop
-            %ul.social_icons
-              %li
-                %a{:href => "#"}
-                  %i.fa.fa-facebook
-              %li
-                %a{:href => "#"}
-                  %i.fa.fa-twitter
-              %li
-                %a{:href => "#"}
-                  %i.fa.fa-google-plus
-        / /.media
-        %p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-    / /.col-lg-4
+        =render 'media',member: @members[0]
     .col-md-4.col-sm-6.col-md-offset-2
       .single-profile-top.wow.fadeInDown{"data-wow-delay" => "300ms", "data-wow-duration" => "1000ms"}
-        .media
-          .pull-left
-            %a{:href => "#"}
-              %img.media-object{:alt => "", :src => "img/man2.jpg"}/
-          .media-body
-            %h4 橋本龍朋
-            %h5 書記
-            %ul.tag.clearfix
-              %li.btn
-                %a{:href => "#"} Web
-              %li.btn
-                %a{:href => "#"} Ui
-              %li.btn
-                %a{:href => "#"} Ux
-              %li.btn
-                %a{:href => "#"} Photoshop
-            %ul.social_icons
-              %li
-                %a{:href => "#"}
-                  %i.fa.fa-facebook
-              %li
-                %a{:href => "#"}
-                  %i.fa.fa-twitter
-              %li
-                %a{:href => "#"}
-                  %i.fa.fa-google-plus
-        / /.media
-        %p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-    / /.col-lg-4
-  / /.row
+        =render 'media',member: @members[1]
   .row.team-bar
     .first-one-arrow.hidden-xs
       %hr/
@@ -88,61 +31,7 @@
   .row.clearfix
     .col-md-4.col-sm-6.col-md-offset-2
       .single-profile-bottom.wow.fadeInUp{"data-wow-delay" => "600ms", "data-wow-duration" => "1000ms"}
-        .media
-          .pull-left
-            %a{:href => "#"}
-              %img.media-object{:alt => "", :src => "img/man3.jpg"}/
-          .media-body
-            %h4 Jhon Doe
-            %h5 Founder and CEO
-            %ul.tag.clearfix
-              %li.btn
-                %a{:href => "#"} Web
-              %li.btn
-                %a{:href => "#"} Ui
-              %li.btn
-                %a{:href => "#"} Ux
-              %li.btn
-                %a{:href => "#"} Photoshop
-            %ul.social_icons
-              %li
-                %a{:href => "#"}
-                  %i.fa.fa-facebook
-              %li
-                %a{:href => "#"}
-                  %i.fa.fa-twitter
-              %li
-                %a{:href => "#"}
-                  %i.fa.fa-google-plus
-        / /.media
-        %p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+        =render 'media',member: @members[2]
     .col-md-4.col-sm-6.col-md-offset-2
       .single-profile-bottom.wow.fadeInUp{"data-wow-delay" => "600ms", "data-wow-duration" => "1000ms"}
-        .media
-          .pull-left
-            %a{:href => "#"}
-              %img.media-object{:alt => "", :src => "img/man4.jpg"}/
-          .media-body
-            %h4 Jhon Doe
-            %h5 Founder and CEO
-            %ul.tag.clearfix
-              %li.btn
-                %a{:href => "#"} Web
-              %li.btn
-                %a{:href => "#"} Ui
-              %li.btn
-                %a{:href => "#"} Ux
-              %li.btn
-                %a{:href => "#"} Photoshop
-            %ul.social_icons
-              %li
-                %a{:href => "#"}
-                  %i.fa.fa-facebook
-              %li
-                %a{:href => "#"}
-                  %i.fa.fa-twitter
-              %li
-                %a{:href => "#"}
-                  %i.fa.fa-google-plus
-        / /.media
-        %p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+        =render 'media',member: @members[3]
