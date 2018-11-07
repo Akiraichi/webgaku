@@ -26,7 +26,7 @@ class LinebotController < ApplicationController
       when Line::Bot::Event::Message
         case event.type
         when Line::Bot::Event::MessageType::Text
-          contact = Contact.find(1)
+          contact = Contact.all
           message = {
             type: 'text',
             text: "名前：#{contact.name}\nメールアドレス：#{contact.email}\nタイトル：#{contact.phone}\nメッセージ：#{contact.message}"
