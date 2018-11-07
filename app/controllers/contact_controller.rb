@@ -3,6 +3,7 @@ class ContactController < ApplicationController
     @contact = Contact.new
     render 'contact'
   end
+  
   def show
     render 'thanks'
   end
