@@ -26,9 +26,10 @@ class LinebotController < ApplicationController
       when Line::Bot::Event::Message
         case event.type
         when Line::Bot::Event::MessageType::Text
+          contact = Contact.find(1)
           message = {
             type: 'text',
-            text: "Hellow"
+            text: contact.message
           }
           client.reply_message(event['replyToken'], message)
         end
