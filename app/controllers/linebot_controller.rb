@@ -26,12 +26,14 @@ class LinebotController < ApplicationController
       when Line::Bot::Event::Message
         case event.type
         when Line::Bot::Event::MessageType::Text
-          contact = Contact.all
-          message = {
-            type: 'text',
-            text: "名前：#{contact.name}\nメールアドレス：#{contact.email}\nタイトル：#{contact.phone}\nメッセージ：#{contact.message}"
-          }
-          client.reply_message(event['replyToken'], message)
+          contacts = Contact.all
+          for contact in contacts
+            message = {
+              type: 'text',
+              text: "名前：#{contact.name}\nメールアドレス：#{contact.email}\nタイトル：#{contact.phone}\nメッセージ：#{contact.message}"
+            }
+            client.reply_message(event['replyToken'], message)
+          end
         end
       end
     }
