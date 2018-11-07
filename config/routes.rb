@@ -10,4 +10,7 @@ Rails.application.routes.draw do
   post 'contact/confirm' => 'contact#confirm'
   ##### 問い合わせ完了画面
   post 'contact/thanks' => 'contact#thanks'
+
+  ##LINEBot
+  post '/callback' => 'linebot#callback'
 end
