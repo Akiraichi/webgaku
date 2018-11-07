@@ -8,6 +8,24 @@
 @import "css/animate.min.css";
 @import "css/animate.css";
 
-#black1{
-  color: black;
+
+#linkbtn{
+  padding: 20px 60px;
+  font-size: 20px;
+  background: #65AAF0;
+  color: #fff;
+  border-radius: 0;
+  border-color: #fff;
+  text-transform: uppercase;
+
+  color: #272727;
+  opacity: 0.8;
+  -webkit-transition: color 300ms,
+  background-color 300ms;
+  -moz-transition: color 300ms,
+  background-color 300ms;
+  -o-transition: color 300ms,
+  background-color 300ms;
+  transition: color 300ms,
+  background-color 300ms;
 }

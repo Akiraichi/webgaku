@@ -19,7 +19,11 @@
             .wow.fadeInUp{"data-wow-delay" => "0.9s", "data-wow-offset" => "0"}
               %form.form-inline
                 .form-group
-                  %button.btn.btn-primary.btn-lg{:name => "Live Demo", :required => "required", :type => "livedemo"} Learn more
+                  -# =link_to root_path, class: "btn btn-primary btn-lg", id:'linkbtn', role: 'button', type: 'livedemo', required: 'required', name: 'livedemo' do
+                  -#   Leran More
+                  -# %a(class="btn btn-primary btn-lg" href="#" role="button" type="livedemo" required="required" name="Live Demo")
+                  -#   Learm
+                  %button#slidelink.btn.btn-primary.btn-lg{:name => "Live Demo", :required => "required", :type => "livedemo"} Learn more
                 .form-group
                   %button.btn.btn-primary.btn-lg{:name => "Get Now", :required => "required", :type => "getnow"} Get Now
         .item
