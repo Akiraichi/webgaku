@@ -33,6 +33,7 @@ class LinebotController < ApplicationController
               text: "名前：#{contact.name}\nメールアドレス：#{contact.email}\nタイトル：#{contact.phone}\nメッセージ：#{contact.message}"
             }
             client.reply_message(event['replyToken'], message)
+            client.reply_message(event['replyToken'], message)
           end
         end
       end
