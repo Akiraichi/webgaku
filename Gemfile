@@ -65,3 +65,7 @@ gem 'erb2haml'
 gem 'haml-rails'
 
 gem 'jquery-rails'
+
+gem 'pry-rails'
+gem 'pry-byebug'
+gem 'pry-doc'

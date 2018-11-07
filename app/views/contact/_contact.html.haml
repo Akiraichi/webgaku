@@ -8,6 +8,13 @@
         #sendmessage Your message has been sent. Thank you!
         #errormessage
         = form_for @contact, :url => contact_confirm_path do |f|
+          - if @contact.errors.any?
+            .alert.alert-danger{:role => "alert"}
+              %strong 入力内容にエラーがあります
+              %ul
+                - @contact.errors.each do |attr, msg|
+                  %li
+                    = msg
           .form-group
             = f.text_field :name, id: 'name',class: 'form-control', placeholder: 'Your Name'
             -# %input#name.form-control{"data-msg" => "Please enter at least 4 chars", "data-rule" => "minlen:4", :name => "name", :placeholder => "Your Name", :type => "text"}/
