@@ -3,15 +3,18 @@ class ContactController < ApplicationController
     @contact = Contact.new
     render 'contact'
   end
+  def show
+    render 'thanks'
+  end
   ##### 問い合わせフォームから入力された内容をチェックする
   def confirm
-    @contact = Contact.new(name: contact_params[:name], email: contact_params[:email],phone: contact_params[:phone],message: contact_params[:message], )
+    @contact = Contact.create(name: contact_params[:name], email: contact_params[:email],phone: contact_params[:phone],message: contact_params[:message], )
     if @contact.valid?
       # 入力内容に問題ない場合、問い合わせ確認画面を表示
-      render 'confirm'
+      render 'thanks'
     else
       # 入力内容に問題ある場合、問い合わせ画面を再表示
-      render :action => 'contact'
+      render 'contact'
     end
   end
 
