@@ -1,0 +1,25 @@
+.page-header
+  %h1 問い合わせ確認画面
+= form_for @inquiry, :url => inquiry_thanks_path do |f|
+  %table.table
+    %tr
+      %th 名前
+      %td
+        = f.hidden_field :name
+        = @inquiry.name
+    %tr
+      %th メールアドレス
+      %td
+        = f.hidden_field :email
+        = @inquiry.email
+    %tr
+      %th 電話番号
+      %td
+        = f.hidden_field :phone
+        = @inquiry.phone
+    %tr
+      %th 問い合わせ内容
+      %td
+        = f.hidden_field :message
+        = simple_format(@inquiry.message)
+  = f.submit '送信', :class => 'btn btn-primary'
