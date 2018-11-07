@@ -12,7 +12,7 @@ class LinebotController < ApplicationController
   end
 
   def callback
-    body = "Hellow"
+    body = request.body.read
 
     signature = request.env['HTTP_X_LINE_SIGNATURE']
     unless client.validate_signature(body, signature)
@@ -28,7 +28,7 @@ class LinebotController < ApplicationController
         when Line::Bot::Event::MessageType::Text
           message = {
             type: 'text',
-            text: event.message['text']
+            text: "Hellow"
           }
           client.reply_message(event['replyToken'], message)
         end
