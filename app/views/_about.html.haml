@@ -7,7 +7,9 @@
           ITの力を使って学生生活を楽しく、豊かに、便利に。
       .col-md-6.col-sm-6.col-xs-6
         .btn-gamp
-          %a{:href => "#"} Learn More
+          = link_to about_index_path do
+            Learn More
       .col-md-6.col-sm-6.col-xs-6
         .gamp-btn
-          %a{:href => "#"} download
+          =link_to "about#downloadpdf" do
+            download

@@ -19,13 +19,9 @@
             .wow.fadeInUp{"data-wow-delay" => "0.9s", "data-wow-offset" => "0"}
               %form.form-inline
                 .form-group
-                  -# =link_to root_path, class: "btn btn-primary btn-lg", id:'linkbtn', role: 'button', type: 'livedemo', required: 'required', name: 'livedemo' do
-                  -#   Leran More
-                  -# %a(class="btn btn-primary btn-lg" href="#" role="button" type="livedemo" required="required" name="Live Demo")
-                  -#   Learm
-                  %button#slidelink.btn.btn-primary.btn-lg{:name => "Live Demo", :required => "required", :type => "livedemo"} Learn more
+                  %button#slidelink1.btn.btn-primary.btn-lg{:name => "Live Demo", :required => "required", :type => "livedemo"} Learn more
                 .form-group
-                  %button.btn.btn-primary.btn-lg{:name => "Get Now", :required => "required", :type => "getnow"} Get Now
+                  -# %button.btn.btn-primary.btn-lg{:name => "Get Now", :required => "required", :type => "getnow"} Get Now
         .item
           %img.img-responsive{:alt => "", :src => "/img/cashless.jpg"}/
           .carousel-caption
@@ -37,9 +33,9 @@
             .wow.fadeInUp{"data-wow-delay" => "1.6s", "data-wow-offset" => "0"}
               %form.form-inline
                 .form-group
-                  %button.btn.btn-primary.btn-lg{:name => "purchase", :required => "required", :type => "livedemo"} Learn more
+                  %button#slidelink2.btn.btn-primary.btn-lg{:name => "purchase", :required => "required", :type => "livedemo"} Learn more
                 .form-group
-                  %button.btn.btn-primary.btn-lg{:name => "subscribe", :required => "required", :type => "getnow"} Get Now
+                  -# %button.btn.btn-primary.btn-lg{:name => "subscribe", :required => "required", :type => "getnow"} Get Now
         .item
           %img.img-responsive{:alt => "", :src => "/img/how.jpg"}/
           .carousel-caption
@@ -51,9 +47,9 @@
             .wow.fadeInUp{"data-wow-delay" => "0.9s", "data-wow-offset" => "0"}
               %form.form-inline
                 .form-group
-                  %button.btn.btn-primary.btn-lg{:name => "purchase", :required => "required", :type => "livedemo"} Learn more
+                  %button#slidelink3.btn.btn-primary.btn-lg{:name => "purchase", :required => "required", :type => "livedemo"} Learn more
                 .form-group
-                  %button.btn.btn-primary.btn-lg{:name => "subscribe", :required => "required", :type => "getnow"} Get Now
+                  -# %button.btn.btn-primary.btn-lg{:name => "subscribe", :required => "required", :type => "getnow"} Get Now
       %a.left.carousel-control.hidden-xs{"data-slide" => "prev", :href => "#carousel-slider"}
         %i.fa.fa-angle-left
       %a.right.carousel-control.hidden-xs{"data-slide" => "next", :href => "#carousel-slider"}
