@@ -29,7 +29,7 @@ class LinebotController < ApplicationController
           contact = Contact.find(1)
           message = {
             type: 'text',
-            text: contact.message
+            text: "名前：#{contact.name}\nメールアドレス：#{contact.email}\nタイトル：#{contact.phone}\nメッセージ：#{contact.message}"
           }
           client.reply_message(event['replyToken'], message)
         end
