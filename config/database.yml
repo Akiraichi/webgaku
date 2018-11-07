@@ -52,6 +52,6 @@ production:
   adapter: postgresql
   encoding: unicode
   pool: 5
-  database: webgaku_production
-  username: webgaku
-  password: <%= ENV['WEBGAKU_DATABASE_PASSWORD'] %>
+  # database: webgaku_production
+  # username: webgaku
+  # password: <%= ENV['WEBGAKU_DATABASE_PASSWORD'] %>
