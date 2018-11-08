@@ -20,20 +20,19 @@ class LinebotController < ApplicationController
     end
 
     events = client.parse_events_from(body)
-
     events.each { |event|
       case event
       when Line::Bot::Event::Message
         case event.type
         when Line::Bot::Event::MessageType::Text
-          # contacts = Contact.all
-          # text = ""
-          # messages = []
-          # for contact in contacts
-          #   text = "名前：#{contact.name}\nメールアドレス：#{contact.email}\nタイトル：#{contact.phone}\nメッセージ：#{contact.message}"
+          contacts = Contact.all
+          text = ""
+          messages = []
+          for contact in contacts
+            text = "名前：#{contact.name}\nメールアドレス：#{contact.email}\nタイトル：#{contact.phone}\nメッセージ：#{contact.message}"
             message = {
               type: 'text',
-              text: body
+              text: text
             }
             messages << message
           end
