@@ -10,7 +10,12 @@ class LinebotController < ApplicationController
       config.channel_token = ENV["LINE_CHANNEL_TOKEN"]
     }
   end
-
+  def text_message(text)
+    {
+        "type" => "text",
+        "text" => text
+    }
+  end
   def memoPush(message)
     client.push_message(ENV["PUSH_TO_ID"], text_message(message))
   end
