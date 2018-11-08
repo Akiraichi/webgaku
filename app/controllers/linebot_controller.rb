@@ -10,14 +10,13 @@ class LinebotController < ApplicationController
       config.channel_token = ENV["LINE_CHANNEL_TOKEN"]
     }
   end
-  
-  def push(message)
-    client.push_message(PUSH_TO_ID, text_message(message))
-  end
+
+  # def push(message)
+  #   client.push_message(PUSH_TO_ID, text_message(message))
+  # end
 
   def callback
     body = request.body.read
-    
     signature = request.env['HTTP_X_LINE_SIGNATURE']
     unless client.validate_signature(body, signature)
       error 400 do 'Bad Request' end
