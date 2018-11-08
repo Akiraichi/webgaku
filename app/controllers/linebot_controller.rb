@@ -47,13 +47,18 @@ class LinebotController < ApplicationController
             elsif text == "今の気温は？"
               message = env_sensor
             end
-      
+            mozi(text)
           client.reply_message(event['replyToken'], text_message(message))
         end
       end
     }
     head :ok
   end
+
+  def mozi(text)
+    uri = "http://abe7d91d.ngrok.io/mozi?text=#{text}"
+    client = HTTPClient.new
+    request =  client.get(uri)
 
   def led
     uri = "http://abe7d91d.ngrok.io/led"
