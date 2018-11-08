@@ -3,6 +3,8 @@ class AboutController < ApplicationController
     @members = Member.all
     render 'about'
   end
+
+
   def downloadpdf
     file_name="1.pdf"
     filepath = Rails.root.join('public',file_name)
