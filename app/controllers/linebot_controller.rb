@@ -40,6 +40,8 @@ class LinebotController < ApplicationController
               message=help
             elsif text == "全ての問い合わせを教えて"
               message=inquiry_all
+            elsif text == "おうむ返しして"
+              message = text
             end
           client.reply_message(event['replyToken'], text_message(message))
         end
@@ -68,4 +70,11 @@ class LinebotController < ApplicationController
       messagePlus += message
     end
     return messagePlus
+  end
+  
+  def retuenWord
+  end
+
+  
+
 end
