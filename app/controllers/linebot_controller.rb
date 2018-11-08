@@ -45,7 +45,7 @@ class LinebotController < ApplicationController
             elsif text == "今の気温は？"
               message = env_sensor
             end
-          client.reply_message(event['replyToken'], text_message(chat(text)))
+          client.reply_message(event['replyToken'], text_message(message)
         end
       end
     }
@@ -53,7 +53,7 @@ class LinebotController < ApplicationController
   end
 
   def env_sensor
-    uri = "http://703d4280.ngrok.io/get"
+    uri = "http://5b95fc20.ngrok.io/get"
     client = HTTPClient.new
     request =  client.get(uri)
     response = JSON.parse(request.body)
@@ -79,24 +79,23 @@ class LinebotController < ApplicationController
     return message
   end
 
-  def chat(text)
-  a_key = '3976483866534646544d6e4e624736337a53557732644f454e6f6c742e4664457133476f33784e77683435'
-  uri = "https://api.apigw.smt.docomo.ne.jp/naturalChatting/v1/registration?APIKEY=#{a_key}"
-  body = { "botId": "Chatting", "appKind": "Smart Phone" }
-  client = HTTPClient.new()
-  response = client.get(uri)
-  puts response.status
-  puts response.body
-  res = client.post(uri, body, 'Content-Type' => 'application/json')
-  puts res.body
-  response = client.get(uri)
-  puts response
-  puts response.body
-  response = JSON.parse(response.body)
-  puts response
-  return response
-end
-    
+#   def chat(text)
+#   a_key = '3976483866534646544d6e4e624736337a53557732644f454e6f6c742e4664457133476f33784e77683435'
+#   uri = "https://api.apigw.smt.docomo.ne.jp/naturalChatting/v1/registration?APIKEY=#{a_key}"
+#   body = { "botId": "Chatting", "appKind": "Smart Phone" }
+#   client = HTTPClient.new()
+#   response = client.get(uri)
+#   puts response.status
+#   puts response.body
+#   res = client.post(uri, body, 'Content-Type' => 'application/json')
+#   puts res.body
+#   response = client.get(uri)
+#   puts response
+#   puts response.body
+#   response = JSON.parse(response.body)
+#   puts response
+#   return response
+# end
 
   def inquiry_count
     message="現在の問い合わせ総数は#{Contact.count}件です！"
