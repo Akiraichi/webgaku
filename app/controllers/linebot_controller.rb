@@ -33,7 +33,11 @@ class LinebotController < ApplicationController
         case event.type
         when Line::Bot::Event::MessageType::Text
             text = event.message['text']
-          client.reply_message(event['replyToken'], text_message(text))
+            message = text
+            if text == "問い合わせ数を教えて"
+              message=Contact.count
+            end
+          client.reply_message(event['replyToken'], text_message(message))
         end
       end
     }

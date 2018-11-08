@@ -23,7 +23,7 @@ require 'line/bot'
     }
     #textを設定
     contact=Contact.last
-    text = "名前：#{contact.name}\nメールアドレス：#{contact.email}\nタイトル：#{contact.phone}\nメッセージ：#{contact.message}"
+    text = "名前：#{contact.name}\nタイトル：#{contact.phone}\nメッセージ：#{contact.message}"
     # lineボットから送信
     @client.push_message(ENV["PUSH_TO_ID"], text_message(text))
   end
