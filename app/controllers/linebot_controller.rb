@@ -56,7 +56,7 @@ class LinebotController < ApplicationController
   client = HTTPClient.new
   request =  client.get(uri)
   response = JSON.parse(request.body)
-  return response.status
+  return response
  end
 
   def inquiry_count
