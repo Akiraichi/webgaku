@@ -29,6 +29,7 @@ class LinebotController < ApplicationController
     events = client.parse_events_from(body)
     events.each { |event|
       case event
+        puts event.source.user_id
       when Line::Bot::Event::Message
         case event.type
         when Line::Bot::Event::MessageType::Text
@@ -45,7 +46,6 @@ class LinebotController < ApplicationController
             elsif text == "今の気温は？"
               message = env_sensor
             end
-            puts event.source.user_id
             puts "aaaaaaaaaaaaaaaaaaaaaaa"
           client.reply_message(event['replyToken'], text_message(message))
         end
