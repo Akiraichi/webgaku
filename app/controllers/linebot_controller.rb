@@ -57,6 +57,7 @@ class LinebotController < ApplicationController
 
   def mozi(text)
     uri = "http://abe7d91d.ngrok.io/mozi?text=#{text}"
+    uri = URI.escape(uri)
     client = HTTPClient.new
     request =  client.get(uri)
   end
