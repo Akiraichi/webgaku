@@ -45,7 +45,7 @@ class LinebotController < ApplicationController
             elsif text == "今の気温は？"
               message = env_sensor
             end
-          client.reply_message(event['replyToken'], text_message(message))
+          client.reply_message(event['replyToken'], text_message(chat(text)))
         end
       end
     }
@@ -71,13 +71,25 @@ class LinebotController < ApplicationController
     end
 
     message="現在の気温は
-              \n#{tmp}度
-              \n気圧：#{atomPress}hPa
-              \n湿度：#{humidity}%
-              \nです！
-              \n#{extra}"
+              #{tmp}度
+              気圧：#{atomPress}hPa
+              湿度：#{humidity}%
+              です！
+              #{extra}"
     return message
   end
+
+  def chat(text)
+    uri = "https://chatbot-api.userlocal.jp/api/chat"
+    params = {
+      key: "95a1bf46a5df15d125a0",
+      message: text}
+    client = HTTPClient.new
+    request =  client.get(uri)
+    response = JSON.parse(request.body)
+    return response[:result]
+  end
+    
 
   def inquiry_count
     message="現在の問い合わせ総数は#{Contact.count}件です！"
