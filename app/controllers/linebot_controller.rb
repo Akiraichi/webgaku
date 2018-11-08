@@ -35,7 +35,13 @@ class LinebotController < ApplicationController
             text = event.message['text']
             message = text
             if text == "問い合わせ数を教えて"
-              message=Contact.count
+              message="現在の問い合わせ総数は#{Contact.count}件です！"
+            elsif text == "help"
+              message="こんにちは学生会サポートBotのmiraitoです！\n以下のスキルに対応しています！
+                \n[1]全ての問い合わせを教えて
+                \n[2]問い合わせ総数を教えて
+                \n[3]おうむ返しして
+                \n[4]雑談しよう" 
             end
           client.reply_message(event['replyToken'], text_message(message))
         end
