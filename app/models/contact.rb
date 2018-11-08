@@ -14,13 +14,17 @@ require 'line/bot'
     }
   end
 
+  #問い合わせフォームに投稿が来ると実行
   after_create do
+    # Lineボットのクライアント設定
     @client ||= Line::Bot::Client.new { |config|
       config.channel_secret = ENV["LINE_CHANNEL_SECRET"]
       config.channel_token = ENV["LINE_CHANNEL_TOKEN"]
     }
+    #textを設定
     contact=Contact.last
     text = "名前：#{contact.name}\nメールアドレス：#{contact.email}\nタイトル：#{contact.phone}\nメッセージ：#{contact.message}"
+    # lineボットから送信
     @client.push_message(ENV["PUSH_TO_ID"], text_message(text))
   end
 end
