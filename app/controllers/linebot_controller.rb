@@ -37,11 +37,9 @@ class LinebotController < ApplicationController
             if text == "問い合わせ数を教えて"
               message=inquiry_count
             elsif text == "help"
-              message="こんにちは学生会サポートBotのmiraitoです！\n以下のスキルに対応しています！
-                \n[1]全ての問い合わせを教えて
-                \n[2]問い合わせ総数を教えて
-                \n[3]おうむ返しして
-                \n[4]雑談しよう" 
+              message=help
+            elsif text == "全ての問い合わせを教えて"
+              message=inquiry_all
             end
           client.reply_message(event['replyToken'], text_message(message))
         end
@@ -54,5 +52,20 @@ class LinebotController < ApplicationController
     message="現在の問い合わせ総数は#{Contact.count}件です！"
     return message
   end
-
+  def help
+    message="こんにちは学生会サポートBotのmiraitoです！\n以下のスキルに対応しています！
+                \n[常時]Webページへお問い合わせがあった場合は連絡します！
+                \n[1]全ての問い合わせを教えて
+                \n[2]問い合わせ総数を教えて
+                \n[3]おうむ返しして
+                \n[4]雑談しよう" 
+  end
+  def inquiry_all
+    contacts=Contact.all
+    messagePlus = ""
+    for contact in contacts
+      message = "名前：#{contact.name}\nタイトル：#{contact.phone}\nメッセージ：#{contact.message}\n\n"
+      messagePlus += message
+    end
+    return messagePlus
 end
