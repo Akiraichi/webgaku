@@ -12,7 +12,7 @@ class LinebotController < ApplicationController
   end
 
   def memoPush(message)
-    client.push_message(PUSH_TO_ID, text_message(message))
+    client.push_message(ENV["PUSH_TO_ID"], text_message(message))
   end
 
   def callback
