@@ -1,33 +1,17 @@
 require 'line/bot'
+require 'net/https'
+require 'uri'
 
-class LineClient
-  CHANNEL_SECRET = ENV['CHANNEL_SECRET']
-  CHANNEL_ACCESS_TOKEN = ENV['CHANNEL_ACCESS_TOKEN']
-  PUSH_TO_ID = ENV['PUSH_TO_ID']
-
-  attr_reader :client
-
-  def initialize
-    @client ||= Line::Bot::Client.new { |config|
-      config.channel_secret = CHANNEL_SECRET
-      config.channel_token = CHANNEL_ACCESS_TOKEN
-    }
-  end
-
-  def reply(reply_token, message)
-    client.reply_message(reply_token, text_message(message))
-  end
-
-  def push(message)
-    client.push_message(PUSH_TO_ID, text_message(message))
-  end
-
-  private
-
-  def text_message(text)
-    {
-        "type" => "text",
-        "text" => text
-    }
+class Akira
+  class << self
+    def obserbTemp
+      uri = URI.parse('http://1899a3ca.ngrok.io/get')
+      json = Net::HTTP.get(uri)
+      result = JSON.parse(json)
+      puts result
+      puts "id: " + result['humi'].to_s
+      puts "name: " + result['press'].to_s
+      puts "name: " + result['temp'].to_s
+    end
   end
 end

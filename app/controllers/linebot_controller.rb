@@ -40,7 +40,7 @@ class LinebotController < ApplicationController
               message=help
             elsif text == "全ての問い合わせを教えて"
               message=inquiry_all
-            elsif text == "おうむ返しして"
+            elsif text == "雑談しよう"
               message = text
             end
           client.reply_message(event['replyToken'], text_message(message))
@@ -49,19 +49,21 @@ class LinebotController < ApplicationController
     }
     head :ok
   end
-
+    
   def inquiry_count
     message="現在の問い合わせ総数は#{Contact.count}件です！"
     return message
   end
+
   def help
     message="こんにちは学生会サポートBotのmiraitoです！\n以下のスキルに対応しています！
                 \n[常時]Webページへお問い合わせがあった場合は連絡します！
                 \n[1]全ての問い合わせを教えて
                 \n[2]問い合わせ総数を教えて
-                \n[3]おうむ返しして
-                \n[4]雑談しよう" 
+                \n[3]今日の天気を教えて
+            \n将来的にはmiraito経由でWebサイトのコンテンツ更新も可能です" 
   end
+
   def inquiry_all
     contacts=Contact.all
     messagePlus = ""
@@ -71,10 +73,48 @@ class LinebotController < ApplicationController
     end
     return messagePlus
   end
-  
-  def retuenWord
+
+  def zatsudan
+    params = URI.encode_www_form({key: "95a1bf46a5df15d125a0", message: "おはよう"})
+    uri = URI.parse("http://zipcloud.ibsnet.co.jp/api/search?#{params}")
+    @query = uri.query
+    # 新しくHTTPセッションを開始し、結果をresponseへ格納
+    response = Net::HTTP.start(uri.host, uri.port) do |http|
+      # 接続時に待つ最大秒数を設定
+      http.open_timeout = 5
+      # 読み込み一回でブロックして良い最大秒数を設定
+      http.read_timeout = 10
+      # ここでWebAPIを叩いている
+      # Net::HTTPResponseのインスタンスが返ってくる
+      http.get(uri.request_uri)
+    end
+    # 例外処理の開始
+    begin
+      # responseの値に応じて処理を分ける
+      case response
+      # 成功した場合
+      when Net::HTTPSuccess
+        # responseのbody要素をJSON形式で解釈し、hashに変換
+        @result = JSON.parse(response.body)
+        # 表示用の変数に結果を格納
+
+      # 別のURLに飛ばされた場合
+      when Net::HTTPRedirection
+        @message = "Redirection: code=#{response.code} message=#{response.message}"
+      # その他エラー
+      else
+        @message = "HTTP ERROR: code=#{response.code} message=#{response.message}"
+      end
+    # エラー時処理
+    rescue IOError => e
+      @message = "e.message"
+    rescue TimeoutError => e
+      @message = "e.message"
+    rescue JSON::ParserError => e
+      @message = "e.message"
+    rescue => e
+      @message = "e.message"
+    end
   end
-
   
-
 end
