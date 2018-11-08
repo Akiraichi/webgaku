@@ -55,9 +55,8 @@ class LinebotController < ApplicationController
     client = HTTPClient.new
     request =  client.get(uri)
     response = JSON.parse(request.body)
-    return response
+    return response[:temp].to_s
   end
-
   def inquiry_count
     message="現在の問い合わせ総数は#{Contact.count}件です！"
     return message
