@@ -71,11 +71,11 @@ class LinebotController < ApplicationController
     end
 
     message="現在の気温は
-              #{tmp}度
-              気圧：#{atomPress}hPa
-              湿度：#{humidity}%
-              です！
-              #{extra}"
+#{tmp}度
+気圧：#{atomPress}hPa
+湿度：#{humidity}%
+です！
+#{extra}"
     return message
   end
 
