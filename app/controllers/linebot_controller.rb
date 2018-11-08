@@ -60,7 +60,20 @@ class LinebotController < ApplicationController
     atomPress = response["atomPress"]
     humidity = response["humidity"]
 
-    message="現在の気温は #{tmp} 度\n気圧：#{atomPress}hPa\n湿度：#{humidity}%\nです！"
+    if tmp>28.0
+      extra="少し暑いですね"
+    elsif tmp<=28.0 && tmp >= 24.0
+      extra="快適な気温ですね"
+    else 
+      extra="少し寒いですね"
+    end
+
+    message="現在の気温は
+              \n#{tmp}度
+              \n気圧：#{atomPress}hPa
+              \n湿度：#{humidity}%
+              \nです！
+              \n#{extra}"
     return message
   end
 
@@ -74,7 +87,8 @@ class LinebotController < ApplicationController
                 \n[常時]Webページへお問い合わせがあった場合は連絡します！
                 \n[1]全ての問い合わせを教えて
                 \n[2]問い合わせ総数を教えて
-                \n[3]今日の天気を教えて
+                \n[3]今日の天気は？
+                \n[4]今の気温は？
             \n将来的にはmiraito経由でWebサイトのコンテンツ更新も可能です" 
   end
 
