@@ -13,7 +13,7 @@ class LinebotController < ApplicationController
 
   def callback
     body = request.body.read
-
+    
     signature = request.env['HTTP_X_LINE_SIGNATURE']
     unless client.validate_signature(body, signature)
       error 400 do 'Bad Request' end
@@ -26,14 +26,14 @@ class LinebotController < ApplicationController
       when Line::Bot::Event::Message
         case event.type
         when Line::Bot::Event::MessageType::Text
-          contacts = Contact.all
-          text = ""
-          messages = []
-          for contact in contacts
-            text = "名前：#{contact.name}\nメールアドレス：#{contact.email}\nタイトル：#{contact.phone}\nメッセージ：#{contact.message}"
+          # contacts = Contact.all
+          # text = ""
+          # messages = []
+          # for contact in contacts
+          #   text = "名前：#{contact.name}\nメールアドレス：#{contact.email}\nタイトル：#{contact.phone}\nメッセージ：#{contact.message}"
             message = {
               type: 'text',
-              text: text
+              text: body
             }
             messages << message
           end
