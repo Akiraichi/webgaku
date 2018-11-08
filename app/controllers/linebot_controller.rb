@@ -42,7 +42,7 @@ class LinebotController < ApplicationController
             messages << text_message(text)
           end
           # client.reply_message(event['replyToken'], messages)
-          memoPush(@@ttx)
+          memoPush($ttx)
         end
       end
     }

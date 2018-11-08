@@ -8,6 +8,6 @@ class Contact < ApplicationRecord
   validates :message, :presence => { :message => '問い合わせ内容を入力して下さい。'}
   
   after_create do
-    @@ttx = "aaaa"
+    $ttx = "aaaa"
   end
 end
