@@ -11,9 +11,9 @@ class LinebotController < ApplicationController
     }
   end
 
-  # def push(message)
-  #   client.push_message(PUSH_TO_ID, text_message(message))
-  # end
+  def memoPush(message)
+    client.push_message(PUSH_TO_ID, text_message(message))
+  end
 
   def callback
     body = request.body.read
