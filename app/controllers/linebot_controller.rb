@@ -51,7 +51,7 @@ class LinebotController < ApplicationController
   end
     
   def ttest
-    uri = "http://56eb95b3.ngrok.io/get"
+    uri = "http://703d4280.ngrok.io/get"
     client = HTTPClient.new
     request =  client.get(uri)
     response = JSON.parse(request.body)
