@@ -25,6 +25,6 @@ require 'line/bot'
     contact=Contact.last
     text = "名前：#{contact.name}\nタイトル：#{contact.phone}\nメッセージ：#{contact.message}"
     # lineボットから送信
-    @client.push_message(ENV["PUSH_TO_ID"], text_message(text))
+    @client.push_message($userid, text_message(text))
   end
 end
