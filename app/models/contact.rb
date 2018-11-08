@@ -13,13 +13,13 @@ require 'line/bot'
         "text" => text
     }
   end
-  
+
   after_create do
     @client ||= Line::Bot::Client.new { |config|
       config.channel_secret = ENV["LINE_CHANNEL_SECRET"]
       config.channel_token = ENV["LINE_CHANNEL_TOKEN"]
     }
     $ttx=Contact.last.message
-    client.push_message(ENV["PUSH_TO_ID"], text_message($ttx))
+    @client.push_message(ENV["PUSH_TO_ID"], text_message($ttx))
   end
 end
