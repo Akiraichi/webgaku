@@ -47,7 +47,7 @@ class LinebotController < ApplicationController
             elsif text == "今の気温は？"
               message = env_sensor
             end
-            mozi(text)
+          mozi(text)
           client.reply_message(event['replyToken'], text_message(message))
         end
       end
