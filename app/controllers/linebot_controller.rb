@@ -59,6 +59,7 @@ class LinebotController < ApplicationController
     response = JSON.parse(request.body)
     puts response
     puts "qweqweqeweqwewqewqewqewqq"
+    puts response[:temp].to_s
     return response[:temp].to_s
   end
 
