@@ -59,6 +59,7 @@ class LinebotController < ApplicationController
     uri = "http://abe7d91d.ngrok.io/mozi?text=#{text}"
     client = HTTPClient.new
     request =  client.get(uri)
+  end
 
   def led
     uri = "http://abe7d91d.ngrok.io/led"
