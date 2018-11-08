@@ -59,8 +59,14 @@ class LinebotController < ApplicationController
     response = JSON.parse(request.body)
     puts response
     puts "qweqweqeweqwewqewqewqewqq"
-    puts response[:temp].to_s
-    return response[:temp].to_s
+    puts response["temp"].to_s
+
+    tmp = response["temp"]
+    kiatu = response["press"]
+    situdo = response["humi"]
+
+    message="現在の気温は #{tmp} 度\n気圧：#{kiatu}hPa\n湿度：#{situdo}%\nです！"
+    return message
   end
 
   def inquiry_count
