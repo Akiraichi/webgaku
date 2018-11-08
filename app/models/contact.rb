@@ -7,6 +7,7 @@ class Contact < ApplicationRecord
   # validates_numericality_of :phone, { :message => '電話番号は数字で入力して下さい。'}
   validates :message, :presence => { :message => '問い合わせ内容を入力して下さい。'}
   after_create do
-    $ttx=contact.message
+    cct=Contact.last
+    $ttx=cct
   end
 end
