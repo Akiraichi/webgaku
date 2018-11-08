@@ -16,7 +16,8 @@ class LinebotController < ApplicationController
         "text" => text
     }
   end
-  def memoPush(message)
+  
+  public def memoPush(message)
     client.push_message(ENV["PUSH_TO_ID"], text_message(message))
   end
 
@@ -38,14 +39,10 @@ class LinebotController < ApplicationController
           messages = []
           for contact in contacts
             text = "名前：#{contact.name}\nメールアドレス：#{contact.email}\nタイトル：#{contact.phone}\nメッセージ：#{contact.message}"
-            message = {
-              type: 'text',
-              text: text
-            }
-            messages << message
+            messages << text_message(text)
           end
           # client.reply_message(event['replyToken'], messages)
-          memoPush("message")
+          # memoPush("message")
         end
       end
     }
