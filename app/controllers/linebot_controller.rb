@@ -46,8 +46,9 @@ class LinebotController < ApplicationController
               message = "LEDが点灯しました！"
             elsif text == "今の気温は？"
               message = env_sensor
+            else
+              mozi(text)
             end
-          mozi(text)
           client.reply_message(event['replyToken'], text_message(message))
         end
       end
