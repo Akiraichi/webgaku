@@ -28,7 +28,7 @@ class LinebotController < ApplicationController
 
     events = client.parse_events_from(body)
     events.each { |event|
-      $userid = event["source"]["userId"]
+      # $userid = event["source"]["userId"]
       case event
       when Line::Bot::Event::Message
         case event.type
@@ -41,17 +41,24 @@ class LinebotController < ApplicationController
               message=help
             elsif text == "全ての問い合わせを教えて"
               message=inquiry_all
-            elsif text == "雑談しよう"
-              message = text
+            elsif text == "LEDを点灯させて"
+              led
+              message = "LEDが点灯しました！"
             elsif text == "今の気温は？"
               message = env_sensor
             end
-            puts "aaaaaaaaaaaaaaaaaaaaaaa"
+      
           client.reply_message(event['replyToken'], text_message(message))
         end
       end
     }
     head :ok
+  end
+
+  def led
+    uri = "http://abe7d91d.ngrok.io/led"
+    client = HTTPClient.new
+    request =  client.get(uri)
   end
 
   def env_sensor
@@ -107,7 +114,7 @@ class LinebotController < ApplicationController
                 \n[常時]Webページへお問い合わせがあった場合は連絡します！
                 \n[1]全ての問い合わせを教えて
                 \n[2]問い合わせ総数を教えて
-                \n[3]今日の天気は？
+                \n[3]LEDを点灯させて
                 \n[4]今の気温は？
             \n将来的にはmiraito経由でWebサイトのコンテンツ更新も可能です" 
   end
