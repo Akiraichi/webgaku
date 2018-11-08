@@ -28,8 +28,7 @@ class LinebotController < ApplicationController
 
     events = client.parse_events_from(body)
     events.each { |event|
-      ee = event[0]
-      puts ee["message"]
+      puts event["message"]
       case event
       when Line::Bot::Event::Message
         case event.type
