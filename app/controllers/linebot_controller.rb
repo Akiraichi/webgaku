@@ -35,7 +35,7 @@ class LinebotController < ApplicationController
             text = event.message['text']
             message = text
             if text == "問い合わせ数を教えて"
-              message="現在の問い合わせ総数は#{Contact.count}件です！"
+              message=inquiry_count
             elsif text == "help"
               message="こんにちは学生会サポートBotのmiraitoです！\n以下のスキルに対応しています！
                 \n[1]全ての問い合わせを教えて
@@ -49,4 +49,10 @@ class LinebotController < ApplicationController
     }
     head :ok
   end
+
+  def inquiry_count
+    message="現在の問い合わせ総数は#{Contact.count}件です！"
+    return message
+  end
+
 end
