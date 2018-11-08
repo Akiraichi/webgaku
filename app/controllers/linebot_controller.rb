@@ -82,9 +82,10 @@ class LinebotController < ApplicationController
   def chat(text)
     a_key = '3976483866534646544d6e4e624736337a53557732644f454e6f6c742e4664457133476f33784e77683435'
     uri = "https://api.apigw.smt.docomo.ne.jp/dialogue/v1/dialogue?APIKEY=#{a_key}"
+    payload = {'utt': text, 'context': ''}
     client = HTTPClient.new
-    request =  client.get(uri)
-    response = JSON.parse(request.body)
+    client.post(uri, payload, 'Content-Type' => 'application/json')
+    response = client.get(uri)
     puts response
     return response['utt']
   end
