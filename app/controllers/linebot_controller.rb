@@ -16,7 +16,7 @@ class LinebotController < ApplicationController
         "text" => text
     }
   end
-  
+
   public def memoPush(message)
     client.push_message(ENV["PUSH_TO_ID"], text_message(message))
   end
@@ -42,7 +42,7 @@ class LinebotController < ApplicationController
             messages << text_message(text)
           end
           # client.reply_message(event['replyToken'], messages)
-          # memoPush("message")
+          memoPush(@@ttx)
         end
       end
     }
