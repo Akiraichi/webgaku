@@ -9,8 +9,8 @@ class LinebotController < ApplicationController
       config.channel_secret = ENV["LINE_CHANNEL_SECRET"]
       config.channel_token = ENV["LINE_CHANNEL_TOKEN"]
     }
-    PUSH_TO_ID = ENV['PUSH_TO_ID']
   end
+  
   def push(message)
     client.push_message(PUSH_TO_ID, text_message(message))
   end
