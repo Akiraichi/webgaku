@@ -11,15 +11,12 @@ class LinebotController < ApplicationController
       config.channel_token = ENV["LINE_CHANNEL_TOKEN"]
     }
   end
+
   def text_message(text)
     {
         "type" => "text",
         "text" => text
     }
-  end
-
-  public def memoPush(message)
-    client.push_message(ENV["PUSH_TO_ID"], text_message(message))
   end
 
   def callback
@@ -35,19 +32,11 @@ class LinebotController < ApplicationController
       when Line::Bot::Event::Message
         case event.type
         when Line::Bot::Event::MessageType::Text
-          contacts = Contact.all
-          text = ""
-          messages = []
-          for contact in contacts
-            text = "名前：#{contact.name}\nメールアドレス：#{contact.email}\nタイトル：#{contact.phone}\nメッセージ：#{contact.message}"
-            messages << text_message(text)
-          end
-          # client.reply_message(event['replyToken'], messages)
-          memoPush($ttx)
+            text = event.message['text']
+          client.reply_message(event['replyToken'], text_message(text))
         end
       end
     }
-
     head :ok
   end
 end
