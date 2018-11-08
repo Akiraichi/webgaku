@@ -45,8 +45,7 @@ class LinebotController < ApplicationController
             elsif text == "今の気温は？"
               message = env_sensor
             end
-            puts event.source
-            message = event.source
+            puts event
             puts "aaaaaaaaaaaaaaaaaaaaaaa"
           client.reply_message(event['replyToken'], text_message(message))
         end
