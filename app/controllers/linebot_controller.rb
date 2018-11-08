@@ -41,7 +41,7 @@ class LinebotController < ApplicationController
             messages << message
           end
           client.reply_message(event['replyToken'], messages)
-          push("message")
+          # push("message")
         end
       end
     }
