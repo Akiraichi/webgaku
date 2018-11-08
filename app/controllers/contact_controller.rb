@@ -19,10 +19,6 @@ class ContactController < ApplicationController
       # 入力内容に問題ある場合、問い合わせ画面を再表示
       render 'contact'
     end
-    after_create do
-      $ttx = "aaaa"
-    end
-
   end
 
   ##### 問い合わせ完了画面の処理
