@@ -53,7 +53,7 @@ class LinebotController < ApplicationController
   end
 
   def env_sensor
-    uri = "http://5b95fc20.ngrok.io/get"
+    uri = "http://abe7d91d.ngrok.io/get"
     client = HTTPClient.new
     request =  client.get(uri)
     response = JSON.parse(request.body)
