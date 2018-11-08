@@ -62,9 +62,9 @@ class LinebotController < ApplicationController
     atomPress = response["atomPress"]
     humidity = response["humidity"]
 
-    if tmp>28.0
+    if tmp.to_i>28.0
       extra="少し暑いですね"
-    elsif tmp<=28.0 && tmp >= 24.0
+    elsif tmp.to_i<=28.0 && tmp.to_i >= 24.0
       extra="快適な気温ですね"
     else 
       extra="少し寒いですね"
