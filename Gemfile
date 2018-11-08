@@ -73,6 +73,8 @@ gem 'pry-doc'
 gem 'line-bot-api'
 gem 'dotenv-rails' 
 
+gem 'httpclient'
+
 group :production do
   gem 'pg'
 end

@@ -43,13 +43,22 @@ class LinebotController < ApplicationController
             elsif text == "雑談しよう"
               message = text
             end
-          client.reply_message(event['replyToken'], text_message(message))
+
+          client.reply_message(event['replyToken'], text_message(ttest))
         end
       end
     }
     head :ok
   end
     
+ def ttest
+  uri = "http://56eb95b3.ngrok.io/get"
+  client = HTTPClient.new
+  request =  client.get(uri)
+  response = JSON.parse(request.body)
+  return response.status
+ end
+
   def inquiry_count
     message="現在の問い合わせ総数は#{Contact.count}件です！"
     return message
