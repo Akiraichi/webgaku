@@ -43,29 +43,24 @@ class LinebotController < ApplicationController
             elsif text == "雑談しよう"
               message = text
             end
-          client.reply_message(event['replyToken'], text_message(ttest))
+          client.reply_message(event['replyToken'], text_message(env_sensor))
         end
       end
     }
     head :ok
   end
 
-  def ttest
+  def env_sensor
     uri = "http://703d4280.ngrok.io/get"
-    puts uri
     client = HTTPClient.new
     request =  client.get(uri)
-    puts request
     response = JSON.parse(request.body)
-    puts response
-    puts "qweqweqeweqwewqewqewqewqq"
-    puts response["temp"].to_s
 
-    tmp = response["temp"]
-    kiatu = response["press"]
-    situdo = response["humi"]
+    tmp = response["tmp"]
+    atomPress = response["atomPress"]
+    humidity = response["humidity"]
 
-    message="現在の気温は #{tmp} 度\n気圧：#{kiatu}hPa\n湿度：#{situdo}%\nです！"
+    message="現在の気温は #{tmp} 度\n気圧：#{atomPress}hPa\n湿度：#{humidity}%\nです！"
     return message
   end
 
