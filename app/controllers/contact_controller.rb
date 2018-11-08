@@ -8,10 +8,6 @@ class ContactController < ApplicationController
     render 'thanks'
   end
   ##### 問い合わせフォームから入力された内容をチェックする
-  $ttx = "aaqqq"
-  after_create do
-    $ttx = "aaaa"
-  end
 
   def confirm
     @contact = Contact.create(name: contact_params[:name], email: contact_params[:email],phone: contact_params[:phone],message: contact_params[:message], )  
@@ -23,7 +19,9 @@ class ContactController < ApplicationController
       # 入力内容に問題ある場合、問い合わせ画面を再表示
       render 'contact'
     end
-
+    after_create do
+      $ttx = "aaaa"
+    end
 
   end
 
