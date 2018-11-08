@@ -19,7 +19,8 @@ require 'line/bot'
       config.channel_secret = ENV["LINE_CHANNEL_SECRET"]
       config.channel_token = ENV["LINE_CHANNEL_TOKEN"]
     }
-    $ttx=Contact.last.message
-    @client.push_message(ENV["PUSH_TO_ID"], text_message($ttx))
+    contact=Contact.last
+    text = "名前：#{contact.name}\nメールアドレス：#{contact.email}\nタイトル：#{contact.phone}\nメッセージ：#{contact.message}"
+    @client.push_message(ENV["PUSH_TO_ID"], text_message(text))
   end
 end
