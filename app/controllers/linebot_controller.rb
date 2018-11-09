@@ -52,8 +52,7 @@ class LinebotController < ApplicationController
               message=chat(text)
               puts message
             end
-          puts message
-          client.reply_message(event['replyToken'], "hhelo")
+          client.reply_message(event['replyToken'], text_message(message)
         end
       end
     }
