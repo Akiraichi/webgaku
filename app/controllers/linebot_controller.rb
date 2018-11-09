@@ -39,16 +39,16 @@ class LinebotController < ApplicationController
               message=web_site
             elsif text == "全ての問い合わせを教えて" || text=="2"
               message=inquiry_all
-            elsif text == "問い合わせ数を教えて" || text=="4"
+            elsif text == "問い合わせ数を教えて" || text=="3"
               message=inquiry_count
-            elsif text == "LEDを点灯させて" || text=="5"
+            elsif text == "LEDを点灯させて" || text=="4"
               led
               message = "LEDが点灯しました！"
-            elsif text == "今の気温は？" || text=="6"
+            elsif text == "今の気温は？" || text=="5"
               message = env_sensor
-            elsif text == "LINEボットの活用例について教えて" || text=="7"
+            elsif text == "LINEボットの活用例について教えて" || text=="6"
               message=exampleLine
-            elsif text == "help" || text=="8"
+            elsif text == "help" || text=="7"
               message=help
             else
               message=chat(text)
