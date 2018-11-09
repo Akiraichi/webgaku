@@ -47,7 +47,7 @@ class LinebotController < ApplicationController
             elsif text == "LINEボットの活用例について教えて" || text=="5"
               message=exampleLine
             elsif text == "help" || text=="6"
-              message=exampleLine
+              message=help
             else
               message=chat(text)
             end
