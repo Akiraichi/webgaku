@@ -49,7 +49,7 @@ class LinebotController < ApplicationController
             elsif text == "help" || text=="6"
               message=exampleLine
             else
-              mozi(text)
+              message=chat(text)
             end
           client.reply_message(event['replyToken'], text_message(message))
         end
@@ -66,6 +66,16 @@ class LinebotController < ApplicationController
 具体的にはこちらのサイトをご覧ください https://backyard.imjp.co.jp/articles/chatbot"
     return text
   end
+
+  def chat(text)
+    uri = "http://061f20aa.ngrok.io/mozi?text=#{text}"
+    uri = URI.escape(uri)
+    client = HTTPClient.new
+    request =  client.get(uri)
+    response = JSON.parse(request.body)
+    return response["result"]
+  end
+
   def mozi(text)
     uri = "http://061f20aa.ngrok.io/mozi?text=#{text}"
     uri = URI.escape(uri)
