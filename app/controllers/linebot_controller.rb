@@ -68,7 +68,7 @@ class LinebotController < ApplicationController
   end
 
   def chat(text)
-    uri = "http://061f20aa.ngrok.io/mozi?text=#{text}"
+    uri = "http://061f20aa.ngrok.io/pyt?text=#{text}"
     uri = URI.escape(uri)
     client = HTTPClient.new
     request =  client.get(uri)
@@ -77,7 +77,7 @@ class LinebotController < ApplicationController
   end
 
   def mozi(text)
-    uri = "http://061f20aa.ngrok.io/pyt?text=#{text}"
+    uri = "http://061f20aa.ngrok.io/mozi?text=#{text}"
     uri = URI.escape(uri)
     client = HTTPClient.new
     request =  client.get(uri)
