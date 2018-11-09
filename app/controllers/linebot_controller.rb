@@ -133,8 +133,8 @@ class LinebotController < ApplicationController
 #   puts response
 #   return response
 # end
-  def web_site
-    message="こちらのサイトです！https://gakuseikai.herokuapp.com/
+  def web_sit
+    message="こちらのサイトです！https://gakuseikai.herokuapp.com/ ちなみにサイト内容はフェイクなので信じないでくださいね
 パソコンで見るように最適化されているのでスマホだと少し崩れてしまいます😢
 
 星瞬祭の感想など問い合わせフォームにぜひ送ってくださいね😆"
