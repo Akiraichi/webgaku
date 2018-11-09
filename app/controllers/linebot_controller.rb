@@ -35,18 +35,20 @@ class LinebotController < ApplicationController
         when Line::Bot::Event::MessageType::Text
             text = event.message['text']
             message = text
-            if text == "全ての問い合わせを教えて" || text=="1"
+            if text=="Webページにアクセスしたい" || text=="1"
+              message=web_site
+            elsif text == "全ての問い合わせを教えて" || text=="2"
               message=inquiry_all
-            elsif text == "問い合わせ数を教えて" || text=="2"
+            elsif text == "問い合わせ数を教えて" || text=="4"
               message=inquiry_count
-            elsif text == "LEDを点灯させて" || text=="3"
+            elsif text == "LEDを点灯させて" || text=="5"
               led
               message = "LEDが点灯しました！"
-            elsif text == "今の気温は？" || text=="4"
+            elsif text == "今の気温は？" || text=="6"
               message = env_sensor
-            elsif text == "LINEボットの活用例について教えて" || text=="5"
+            elsif text == "LINEボットの活用例について教えて" || text=="7"
               message=exampleLine
-            elsif text == "help" || text=="6"
+            elsif text == "help" || text=="8"
               message=help
             else
               message=chat(text)
@@ -131,7 +133,12 @@ class LinebotController < ApplicationController
 #   puts response
 #   return response
 # end
-
+  def web_site
+    message="こちらのサイトです！https://gakuseikai.herokuapp.com/
+パソコンで見るように最適化されているのでスマホだと少し崩れてしまいます😢
+星瞬祭の感想などは問い合わせフォームにぜひお送りください"
+    return message
+  end
   def inquiry_count
     message="現在の問い合わせ総数は#{Contact.count}件です！"
     return message
@@ -139,13 +146,14 @@ class LinebotController < ApplicationController
 
   def help
     message="こんにちは学生会サポートBotのmiraitoです！\n以下のスキルに対応しています！
-                \n[常時]Webページへお問い合わせがあった場合は連絡します！
-                \n[1]全ての問い合わせを教えて
-                \n[2]問い合わせ総数を教えて
-                \n[3]LEDを点灯させて
-                \n[4]今の気温は？
-                \n[5]LINEボットの活用例について教えて
-                \n[6]help
+                \n[常時]Webページへお問い合わせがあった場合は管理者宛に連絡します
+                \n[1]Webページにアクセスしたい
+                \n[2]全ての問い合わせを教えて
+                \n[3]問い合わせ総数を教えて
+                \n[4]LEDを点灯させて
+                \n[5]今の気温は？
+                \n[6]LINEボットの活用例について教えて
+                \n[7]help
             \nスキルを実行したいときは、スキルをそのまま入力するか番号を入力してください。例えば、今の気温は？と入力すると気温が返信されます。また、4と入力しても気温が返信されます。" 
   end
 
