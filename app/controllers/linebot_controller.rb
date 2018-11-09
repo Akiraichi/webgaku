@@ -51,7 +51,7 @@ class LinebotController < ApplicationController
             else
               message=chat(text)
             end
-          client.reply_message(event['replyToken'], text_message(message))
+          client.reply_message(event['replyToken'], chat(text))
         end
       end
     }
@@ -73,6 +73,7 @@ class LinebotController < ApplicationController
     client = HTTPClient.new
     request =  client.get(uri)
     response = JSON.parse(request.body)
+    puts response
     return response[:result]
   end
 
