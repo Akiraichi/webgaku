@@ -73,7 +73,7 @@ class LinebotController < ApplicationController
     client = HTTPClient.new
     request =  client.get(uri)
     response = JSON.parse(request.body)
-    return response["result"]
+    return response[:result]
   end
 
   def mozi(text)
