@@ -35,17 +35,19 @@ class LinebotController < ApplicationController
         when Line::Bot::Event::MessageType::Text
             text = event.message['text']
             message = text
-            if text == "問い合わせ数を教えて"
-              message=inquiry_count
-            elsif text == "help"
-              message=help
-            elsif text == "全ての問い合わせを教えて"
+            if text == "全ての問い合わせを教えて" || text=="1"
               message=inquiry_all
-            elsif text == "LEDを点灯させて"
+            elsif text == "問い合わせ数を教えて" || text=="2"
+              message=inquiry_count
+            elsif text == "LEDを点灯させて" || text=="3"
               led
               message = "LEDが点灯しました！"
-            elsif text == "今の気温は？"
+            elsif text == "今の気温は？" || text=="4"
               message = env_sensor
+            elsif text == "LINEボットの活用例について教えて" || text=="5"
+              message=exampleLine
+            elsif text == "help" || text=="6"
+              message=exampleLine
             else
               mozi(text)
             end
@@ -55,7 +57,15 @@ class LinebotController < ApplicationController
     }
     head :ok
   end
-
+  def exampleLine
+    text = "チャットBOTサービスの方向性は、大きく
+「サポート（問い合わせ）」
+「エンゲージメント（ファン育成）」
+「コンサルティング（課題解決・情報提供）」
+の3つのカテゴリーに分けることができます。
+具体的にはこちらのサイトをご覧ください https://backyard.imjp.co.jp/articles/chatbot"
+    return text
+  end
   def mozi(text)
     uri = "http://061f20aa.ngrok.io/mozi?text=#{text}"
     uri = URI.escape(uri)
@@ -124,7 +134,9 @@ class LinebotController < ApplicationController
                 \n[2]問い合わせ総数を教えて
                 \n[3]LEDを点灯させて
                 \n[4]今の気温は？
-            \n将来的にはmiraito経由でWebサイトのコンテンツ更新も可能です" 
+                \n[5]LINEボットの活用例について教えて
+                \n[6]help
+            \nスキルを実行したいときは、スキルをそのまま入力するか番号を入力してください。例えば、今の気温は？と入力すると気温が返信されます。また、4と入力しても気温が返信されます。" 
   end
 
   def inquiry_all
