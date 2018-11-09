@@ -35,20 +35,20 @@ class LinebotController < ApplicationController
         when Line::Bot::Event::MessageType::Text
             text = event.message['text']
             message = text
-            if text=="Webページにアクセスしたい" || text=="1"
+            if text=="Webページにアクセスしたい" || text=="web"
               message=web_site
-            elsif text == "全ての問い合わせを教えて" || text=="2"
+            elsif text == "全ての問い合わせを教えて" || text=="all"
               message=inquiry_all
-            elsif text == "問い合わせ数を教えて" || text=="3"
+            elsif text == "問い合わせ数を教えて" || text=="count"
               message=inquiry_count
-            elsif text == "LEDを点灯させて" || text=="4"
+            elsif text == "LEDを点灯させて" || text=="led"
               led
               message = "LEDが点灯しました！"
-            elsif text == "今の気温は？" || text=="5"
+            elsif text == "今の気温は？" || text=="tmp"
               message = env_sensor
-            elsif text == "LINEボットの活用例について教えて" || text=="6"
+            elsif text == "LINEボットの活用例について教えて" || text=="line"
               message=exampleLine
-            elsif text == "help" || text=="7"
+            elsif text == "使い方は？" || text=="help"
               message=help
             else
               message=chat(text)
@@ -148,15 +148,15 @@ class LinebotController < ApplicationController
   def help
     message="こんにちは学生会サポートBotのmiraitoです！\n以下のスキルに対応しています！
                 \n[常時]Webページへお問い合わせがあった場合は管理者宛に連絡します
-                \n[1]Webページにアクセスしたい
-                \n[2]全ての問い合わせを教えて
-                \n[3]問い合わせ総数を教えて
-                \n[4]LEDを点灯させて
-                \n[5]今の気温は？
-                \n[6]LINEボットの活用例について教えて
-                \n[7]help
+                \n[web]Webページにアクセスしたい
+                \n[all]全ての問い合わせを教えて
+                \n[count]問い合わせ総数を教えて
+                \n[led]LEDを点灯させて
+                \n[tmp]今の気温は？
+                \n[line]LINEボットの活用例について教えて
+                \n[help]使い方は？
             \nスキルを実行したいときは、スキルをそのまま入力するか番号を入力してください。
-            \n例えば、今の気温は？と入力すると気温が返信されます。また、4と入力しても気温が返信されます。" 
+            \n例えば、今の気温は？と入力すると気温が返信されます。また、tmpと入力しても気温が返信されます。" 
   end
 
   def inquiry_all
