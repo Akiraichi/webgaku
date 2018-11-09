@@ -53,7 +53,7 @@ class LinebotController < ApplicationController
               puts message
             end
           puts message
-          client.reply_message(event['replyToken'], message)
+          client.reply_message(event['replyToken'], "hhelo")
         end
       end
     }
