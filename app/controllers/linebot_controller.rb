@@ -70,7 +70,7 @@ class LinebotController < ApplicationController
   end
 
   def chat(text)
-    uri = "http://a8672bb5.ngrok.io/pyt?text=#{text}"
+    uri = "13ea3bc7.ngrok.io/pyt?text=#{text}"
     uri = URI.escape(uri)
     client = HTTPClient.new
     request =  client.get(uri)
@@ -79,20 +79,20 @@ class LinebotController < ApplicationController
   end
 
   def mozi(text)
-    uri = "http://a8672bb5.ngrok.io/mozi?text=#{text}"
+    uri = "13ea3bc7.ngrok.io/mozi?text=#{text}"
     uri = URI.escape(uri)
     client = HTTPClient.new
     request =  client.get(uri)
   end
 
   def led
-    uri = "http://a8672bb5.ngrok.io/led"
+    uri = "13ea3bc7.ngrok.io/led"
     client = HTTPClient.new
     request =  client.get(uri)
   end
 
   def env_sensor
-    uri = "http://a8672bb5.ngrok.io/get"
+    uri = "13ea3bc7.ngrok.io/get"
     client = HTTPClient.new
     request =  client.get(uri)
     response = JSON.parse(request.body)
