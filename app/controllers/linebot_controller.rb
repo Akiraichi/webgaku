@@ -6,12 +6,14 @@ class LinebotController < ApplicationController
 
 
   def client
+    # line_clientのための初期設定
     @client ||= Line::Bot::Client.new { |config|
       config.channel_secret = ENV["LINE_CHANNEL_SECRET"]
       config.channel_token = ENV["LINE_CHANNEL_TOKEN"]
     }
   end
 
+  # jsonを利用するための前処理
   def text_message(text)
     {
         "type" => "text",
@@ -20,8 +22,10 @@ class LinebotController < ApplicationController
   end
 
   def callback
+    # main処理部
     body = request.body.read
     signature = request.env['HTTP_X_LINE_SIGNATURE']
+    # エラー処理
     unless client.validate_signature(body, signature)
       error 400 do 'Bad Request' end
     end
@@ -69,6 +73,7 @@ class LinebotController < ApplicationController
     return text
   end
 
+  # AIAPIとのチャット
   def chat(text)
     uri = "http://13ea3bc7.ngrok.io/pyt?text=#{text}"
     uri = URI.escape(uri)
@@ -78,6 +83,7 @@ class LinebotController < ApplicationController
     return response["result"]
   end
 
+  # LCDへのメッセージの表示
   def mozi(text)
     uri = "http://13ea3bc7.ngrok.io/mozi?text=#{text}"
     uri = URI.escape(uri)
@@ -85,12 +91,14 @@ class LinebotController < ApplicationController
     request =  client.get(uri)
   end
 
+  # LEDの点灯
   def led
     uri = "http://13ea3bc7.ngrok.io/led"
     client = HTTPClient.new
     request =  client.get(uri)
   end
 
+  # 各種センサー値の取得
   def env_sensor
     uri = "http://13ea3bc7.ngrok.io/get"
     client = HTTPClient.new
@@ -116,23 +124,6 @@ class LinebotController < ApplicationController
     return message
   end
 
-#   def chat(text)
-#   a_key = 
-#   uri = "https://api.apigw.smt.docomo.ne.jp/naturalChatting/v1/registration?APIKEY=#{a_key}"
-#   body = { "botId": "Chatting", "appKind": "Smart Phone" }
-#   client = HTTPClient.new()
-#   response = client.get(uri)
-#   puts response.status
-#   puts response.body
-#   res = client.post(uri, body, 'Content-Type' => 'application/json')
-#   puts res.body
-#   response = client.get(uri)
-#   puts response
-#   puts response.body
-#   response = JSON.parse(response.body)
-#   puts response
-#   return response
-# end
   def web_site
     message="こちらのサイトです！https://gakuseikai.herokuapp.com/ ちなみにサイト内容はフェイクなので信じないでくださいね
 パソコンで見るように最適化されているのでスマホだと少し崩れてしまいます😢
@@ -140,11 +131,13 @@ class LinebotController < ApplicationController
 星瞬祭の感想など問い合わせフォームにぜひ送ってくださいね😆"
     return message
   end
+  # 問い合わせ総数の取得
   def inquiry_count
     message="現在の問い合わせ総数は#{Contact.count}件です！"
     return message
   end
 
+  # helpメッセージの表示
   def help
     message="こんにちは学生会サポートBotのmiraitoです！\n以下のスキルに対応しています！
                 \n[常時]Webページへお問い合わせがあった場合は管理者宛に連絡します
@@ -159,6 +152,7 @@ class LinebotController < ApplicationController
             \n例えば、今の気温は？と入力すると気温が返信されます。また、tmpと入力しても気温が返信されます。" 
   end
 
+  # 全ての問い合わせの表示
   def inquiry_all
     contacts=Contact.all
     messagePlus = ""
@@ -168,5 +162,4 @@ class LinebotController < ApplicationController
     end
     return messagePlus
   end
-  
 end
